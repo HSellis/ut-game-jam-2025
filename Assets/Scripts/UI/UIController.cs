@@ -8,6 +8,9 @@ public class UIController : MonoBehaviour
 
     public TextMeshProUGUI textQuestion;
     public TextMeshProUGUI[] textOptions;
+
+    private Color defaultColor = Color.red;
+    private Color[] optionColors = { Color.blue, Color.green, Color.yellow };
  
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -28,17 +31,31 @@ public class UIController : MonoBehaviour
         for (int i = 0; i < textOptions.Length; i++)
         {
             TextMeshProUGUI textMesh = textOptions[i];
+            
             if (i < node.playerChoices.Count)
             {
                 textMesh.gameObject.SetActive(true);
                 textMesh.text = node.playerChoices[i].text;
 
                 Button textMeshButton = textMesh.GetComponent<Button>();
-                textMeshButton.interactable = !node.requireMinigame;
+
+                
+                if (node.requireMinigame)
+                {
+                    textMesh.color = optionColors[i];
+                    textMeshButton.enabled = false;
+                } else
+                {
+                    textMesh.color = defaultColor;
+                    textMeshButton.enabled = true;
+                }
+                
+                
             } else
             {
                 textMesh.gameObject.SetActive(false);
             }
+            
             
         }
     }
@@ -46,9 +63,9 @@ public class UIController : MonoBehaviour
     public void SelectTextOption(int index)
     {
         Debug.Log("Seletce");
-        TextMeshProUGUI textMesh = textOptions[index];
-        Button textMeshButton = textMesh.GetComponent<Button>();
         
+
+
     }
 
 
