@@ -1323,6 +1323,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   masterMixer: {fileID: 24100000, guid: ef86a9cabfdb50f4daeefc92610097c5, type: 2}
+  mainMenuTheme: {fileID: 8300000, guid: 8c242116dc0d29641ad8b211ab62eee9, type: 3}
+  character1Theme: {fileID: 8300000, guid: 6927d6b5f351621488bc8843e91aebc4, type: 3}
 --- !u!4 &1220751247
 Transform:
   m_ObjectHideFlags: 0
@@ -2274,6 +2276,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainPanel: {fileID: 1519616170}
   settingsPanel: {fileID: 489945243}
+  audioManager: {fileID: 0}
 --- !u!1 &2097851038
 GameObject:
   m_ObjectHideFlags: 0
