@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class NarrativeController : MonoBehaviour
@@ -37,16 +38,30 @@ public class NarrativeController : MonoBehaviour
         currentDialogueNode = node;
     }
 
-    public void ProgressDialogue(int selectedOptionNumber)
+    public void SelectDialogueOption(int selectedOptionNumber)
     {
+        if (currentDialogueNode.requireMinigame)
+        {
+            UIController.SelectTextOption(selectedOptionNumber);
+            mazeController.DisableMaze();
+        }
+        
         DialogueNode nextDialogueNode = currentDialogueNode.playerChoices[selectedOptionNumber].nextDialogueNode;
-        LoadDialogueNode(nextDialogueNode);
+
+        if (currentDialogueNode.requireMinigame) {
+            // Wait 2 sec
+            StartCoroutine(ProgressDialogueWithDelay(2f, nextDialogueNode));
+        } else {
+            LoadDialogueNode(nextDialogueNode);
+        }
+        
         
     }
 
-    public void MazeCompleted(int exitNumber)
+    IEnumerator ProgressDialogueWithDelay(float delay, DialogueNode dialogNode)
     {
-        mazeController.DisableMaze();
-        ProgressDialogue(exitNumber);
+        yield return new WaitForSeconds(delay);
+        LoadDialogueNode(dialogNode);
     }
+
 }

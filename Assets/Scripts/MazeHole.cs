@@ -23,7 +23,7 @@ public class MazeHole : MonoBehaviour
         Ball ball = other.GetComponent<Ball>();
         if (ball != null)
         {
-            Invoke("CompleteMaze", 2f);
+            CompleteMaze();
         }
     }
 

@@ -20,6 +20,6 @@ public class Maze : MonoBehaviour
 
     public void OnBallExit(int number)
     {
-        narrativeController.MazeCompleted(number);
+        narrativeController.SelectDialogueOption(number);
     }
 }

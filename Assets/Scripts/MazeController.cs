@@ -4,7 +4,8 @@ using UnityEngine;
 public class MazeController : MonoBehaviour
 {
     public Maze maze;
-    public GameObject ball;
+    public Ball ballPrefab;
+    private Ball ball;
     private Transform mazeTransform;
     private Rigidbody ballRigidBody;
 
@@ -20,7 +21,7 @@ public class MazeController : MonoBehaviour
     void Start()
     {
         mazeTransform = maze.transform;
-        ballRigidBody = ball.GetComponent<Rigidbody>();
+        //ballRigidBody = ball.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -78,6 +79,6 @@ public class MazeController : MonoBehaviour
 
     private void SpawnBall()
     {
-        Instantiate(ball, maze.spawnLocation.position, Quaternion.identity);
+        ball = Instantiate(ballPrefab, maze.spawnLocation.position, Quaternion.identity);
     }
 }

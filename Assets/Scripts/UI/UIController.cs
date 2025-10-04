@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
@@ -23,32 +24,38 @@ public class UIController : MonoBehaviour
 
     public void LoadDialogueNode(DialogueNode node)
     {
-        Debug.Log(node.npcText);
         textQuestion.text = node.npcText;
         for (int i = 0; i < node.playerChoices.Count; i++)
         {
-            textOptions[i].text = node.playerChoices[i].text;
+            TextMeshProUGUI textMesh = textOptions[i];
+            textMesh.text = node.playerChoices[i].text;
+
+            Button textMeshButton = textMesh.GetComponent<Button>();
+            textMeshButton.interactable = !node.requireMinigame;
         }
     }
 
     public void SelectTextOption(int index)
     {
-        textOptions[index].color = Color.white;
+        Debug.Log("Seletce");
+        TextMeshProUGUI textMesh = textOptions[index];
+        Button textMeshButton = textMesh.GetComponent<Button>();
+        
     }
 
 
     public void SelectOption1()
     {
-        narrativeController.ProgressDialogue(0);
+        narrativeController.SelectDialogueOption(0);
     }
 
     public void SelectOption2()
     {
-        narrativeController.ProgressDialogue(1);
+        narrativeController.SelectDialogueOption(1);
     }
 
     public void SelectOption3()
     {
-        narrativeController.ProgressDialogue(2);
+        narrativeController.SelectDialogueOption(2);
     }
 }
