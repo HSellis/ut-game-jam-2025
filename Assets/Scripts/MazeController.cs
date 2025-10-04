@@ -1,9 +1,14 @@
+using DG.Tweening;
 using UnityEngine;
 
-public class Controller : MonoBehaviour
+public class MazeController : MonoBehaviour
 {
     public Transform mazeTransform;
     public float rotationSpeed = 10;
+
+    public float animationSpeed = 2;
+    public Vector3 upPosition;
+    public Vector3 downPosition;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -33,5 +38,16 @@ public class Controller : MonoBehaviour
         {
             mazeTransform.Rotate(Vector3.back, rotationSpeed * Time.deltaTime);
         }
+    }
+
+
+    public void MoveUp()
+    {
+        mazeTransform.DOMove(upPosition, animationSpeed);
+    }
+
+    public void MoveDown()
+    {
+        mazeTransform.DOMove(downPosition, animationSpeed);
     }
 }
