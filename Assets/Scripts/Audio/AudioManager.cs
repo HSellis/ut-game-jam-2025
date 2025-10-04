@@ -5,7 +5,11 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance { get; private set; }
     public AudioMixer masterMixer; // assign in Inspector
+    private AudioSource audioSource;
     const string MUSIC_PARAM = "MusicVol";
+
+    public AudioResource mainMenuTheme;
+    public AudioResource character1Theme;
 
     void Awake()
     {
@@ -14,6 +18,7 @@ public class AudioManager : MonoBehaviour
             return;
         }
         Instance = this;
+        audioSource = GetComponent<AudioSource>();
         DontDestroyOnLoad(gameObject); // persists so slider works across scenes
     }
 
@@ -35,5 +40,11 @@ public class AudioManager : MonoBehaviour
         }
         linear01 = 1f;
         return linear01;
+    }
+
+    public void PlayCharacter1Theme()
+    {
+        audioSource.resource = character1Theme;
+        audioSource.Play();
     }
 }

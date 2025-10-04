@@ -8,10 +8,12 @@ public class StartMenuManager : MonoBehaviour
     public GameObject mainPanel;
     public GameObject settingsPanel;
 
+    public AudioManager audioManager;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        audioManager = AudioManager.Instance;
     }
 
     // Update is called once per frame
@@ -22,6 +24,7 @@ public class StartMenuManager : MonoBehaviour
 
     public void OnPlayPressed()
     {
+        audioManager.PlayCharacter1Theme();
         SceneManager.LoadScene("MainScene");
     }
 
