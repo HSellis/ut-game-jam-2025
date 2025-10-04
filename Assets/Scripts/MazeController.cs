@@ -3,17 +3,24 @@ using UnityEngine;
 
 public class MazeController : MonoBehaviour
 {
-    public Transform mazeTransform;
-    public float rotationSpeed = 10;
+    public Maze maze;
+    public GameObject ball;
+    private Transform mazeTransform;
+    private Rigidbody ballRigidBody;
 
+    public float rotationSpeed = 10;
     public float animationSpeed = 2;
+
+    public float ballAccelerationRate = 20;
+
     public Vector3 upPosition;
     public Vector3 downPosition;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //mazeBody = mazeTransform.GetComponent<Rigidbody>();
+        mazeTransform = maze.transform;
+        ballRigidBody = ball.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -40,14 +47,35 @@ public class MazeController : MonoBehaviour
         }
     }
 
-
-    public void MoveUp()
+    private void FixedUpdate()
     {
-        mazeTransform.DOMove(upPosition, animationSpeed);
+        /*
+        float accelerationRateX = Mathf.Sin(mazeTransform.rotation.eulerAngles.x * Mathf.PI / 180);
+        float accelerationRateZ = Mathf.Sin(mazeTransform.rotation.eulerAngles.z * Mathf.PI / 180);
+        Debug.Log(Time.fixedDeltaTime);
+        Vector3 ballAcceleration = new Vector3(ballAccelerationRate * accelerationRateX, 0f, ballAccelerationRate * accelerationRateZ) * Time.fixedDeltaTime;
+        Debug.Log(ballAcceleration);
+        ballRigidBody.AddForce(ballAcceleration, ForceMode.VelocityChange);
+        // ballRigidBody.linearVelocity += ballAcceleration;
+        Debug.Log(ballRigidBody.linearVelocity);
+        */
     }
 
-    public void MoveDown()
+
+    public void EnableMaze()
+    {
+        mazeTransform.DOMove(upPosition, animationSpeed);
+        Invoke("SpawnBall", animationSpeed + 0.5f);
+
+    }
+
+    public void DisableMaze()
     {
         mazeTransform.DOMove(downPosition, animationSpeed);
+    }
+
+    private void SpawnBall()
+    {
+        Instantiate(ball, maze.spawnLocation.position, Quaternion.identity);
     }
 }

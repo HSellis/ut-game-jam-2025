@@ -19,11 +19,11 @@ public class NarrativeController : MonoBehaviour
 
     public void BringMaze()
     {
-        mazeController.MoveUp();
+        mazeController.EnableMaze();
     }
 
     public void MoveAwayMaze()
     {
-        mazeController.MoveDown();
+        mazeController.DisableMaze();
     }
 }
