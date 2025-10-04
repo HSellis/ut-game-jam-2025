@@ -26,4 +26,9 @@ public class NarrativeController : MonoBehaviour
     {
         mazeController.DisableMaze();
     }
+
+    public void MazeCompleted(int exitNumber)
+    {
+        MoveAwayMaze();
+    }
 }
