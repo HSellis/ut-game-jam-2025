@@ -1,14 +1,15 @@
 using UnityEngine;
 
-public class Maze : MonoBehaviour
+public class MazeHole : MonoBehaviour
 {
-    public Transform spawnLocation;
 
+    private Maze maze;
+    public int number;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        maze = transform.parent.GetComponent<Maze>();
     }
 
     // Update is called once per frame
@@ -17,8 +18,8 @@ public class Maze : MonoBehaviour
         
     }
 
-    public void onBallExit(int number)
+    private void OnTriggerEnter(Collider other)
     {
-
+        maze.onBallExit(number);
     }
 }
