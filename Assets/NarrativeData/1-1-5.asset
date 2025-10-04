@@ -19,4 +19,5 @@ MonoBehaviour:
   playerChoices:
   - text: Continue
     nextDialogueNode: {fileID: 11400000, guid: d9fdd727b99054943bb482419dac21e1, type: 2}
+    result: 1
   requireMinigame: 0

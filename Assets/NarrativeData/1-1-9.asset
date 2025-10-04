@@ -15,6 +15,7 @@ MonoBehaviour:
   npcText: '*You end up exchanging contact info and start planning something to do*
     *You enda up deciding to go to buy pet shops together*'
   playerChoices:
-  - text: ...
+  - text: Continue
     nextDialogueNode: {fileID: 11400000, guid: 1170d6ccc603c5542b3d426f05e3df50, type: 2}
+    result: 2
   requireMinigame: 1

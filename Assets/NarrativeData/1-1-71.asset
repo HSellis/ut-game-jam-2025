@@ -15,6 +15,7 @@ MonoBehaviour:
   npcText: Oh okay. But thanks for giving this back to me. See you around.   *she
     walks away, leaving you forever wondering what could've been*
   playerChoices:
-  - text: '*lie* Yeah I love all the pet shops. My favorite is the dog one'
+  - text: Continue
     nextDialogueNode: {fileID: 11400000, guid: 681eff371eaee994f8a7d4078aeb43d2, type: 2}
+    result: 0
   requireMinigame: 1

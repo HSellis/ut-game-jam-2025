@@ -17,8 +17,11 @@ MonoBehaviour:
   playerChoices:
   - text: Mr Woof
     nextDialogueNode: {fileID: 11400000, guid: fb593ee306d69414f88a5748d81ecf83, type: 2}
+    result: 0
   - text: Lps~ The JFK assassination
     nextDialogueNode: {fileID: 11400000, guid: a42cfb5030d42f7449557453c19dfbb4, type: 2}
-  - text: ADD SOMETHING HERE
+    result: 2
+  - text: Doodley doo videos
     nextDialogueNode: {fileID: 11400000, guid: a42cfb5030d42f7449557453c19dfbb4, type: 2}
+    result: 1
   requireMinigame: 1

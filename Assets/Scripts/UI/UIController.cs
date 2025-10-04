@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,6 +12,11 @@ public class UIController : MonoBehaviour
 
     private Color defaultColor = Color.red;
     private Color[] optionColors = { Color.blue, Color.green, Color.yellow };
+
+    public RawImage characterImage;
+    public Texture negativeResultSprite;
+    public Texture neutralResultSprite;
+    public Texture positiveResultSprite;
  
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -60,12 +66,20 @@ public class UIController : MonoBehaviour
         }
     }
 
-    public void SelectTextOption(int index)
+    public void ShowDialogResult(DialogueOptionResult result)
     {
-        Debug.Log("Seletce");
-        
-
-
+        switch (result)
+        {
+            case DialogueOptionResult.NEGATIVE:
+                characterImage.texture = negativeResultSprite;
+                break;
+            case DialogueOptionResult.NEUTRAL:
+                characterImage.texture = neutralResultSprite;
+                break;
+            case DialogueOptionResult.POSITIVE:
+                characterImage.texture = positiveResultSprite;
+                break;
+        }
     }
 
 

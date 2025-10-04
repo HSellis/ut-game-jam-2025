@@ -17,8 +17,11 @@ MonoBehaviour:
   playerChoices:
   - text: YES!
     nextDialogueNode: {fileID: 11400000, guid: 115dfa0aa1d04a54093433f220edc64b, type: 2}
+    result: 2
   - text: 'Yes, I''d love to. '
     nextDialogueNode: {fileID: 11400000, guid: 115dfa0aa1d04a54093433f220edc64b, type: 2}
+    result: 2
   - text: 'No, I think I have many other things to do. '
     nextDialogueNode: {fileID: 11400000, guid: 681eff371eaee994f8a7d4078aeb43d2, type: 2}
+    result: 0
   requireMinigame: 1

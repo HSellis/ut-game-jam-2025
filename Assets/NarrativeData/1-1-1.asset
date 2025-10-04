@@ -15,6 +15,7 @@ MonoBehaviour:
   npcText: '*While you are walking in the street you notice an eye-catching young
     lady walking ahead of you*'
   playerChoices:
-  - text: Go to the cafe
+  - text: Continue
     nextDialogueNode: {fileID: 11400000, guid: 61d0fed6c741b8c4a9c1651610eaf394, type: 2}
+    result: 1
   requireMinigame: 0

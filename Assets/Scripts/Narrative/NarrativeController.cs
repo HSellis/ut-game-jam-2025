@@ -40,10 +40,7 @@ public class NarrativeController : MonoBehaviour
 
     public void SelectDialogueOption(int selectedOptionNumber)
     {
-        if (currentDialogueNode.requireMinigame)
-        {
-            UIController.SelectTextOption(selectedOptionNumber);
-        }
+        UIController.ShowDialogResult(currentDialogueNode.playerChoices[selectedOptionNumber].result);
         
         DialogueNode nextDialogueNode = currentDialogueNode.playerChoices[selectedOptionNumber].nextDialogueNode;
 

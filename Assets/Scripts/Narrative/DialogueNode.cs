@@ -3,6 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+public enum DialogueOptionResult
+{
+    NEGATIVE,
+    NEUTRAL,
+    POSITIVE
+}
+
 [Serializable]
 public class DialogueOption
 {
@@ -11,6 +18,8 @@ public class DialogueOption
 
     [Tooltip("The dialogue node to jump to after choosing this option.")]
     public DialogueNode nextDialogueNode;
+
+    public DialogueOptionResult result;
 }
 
 
