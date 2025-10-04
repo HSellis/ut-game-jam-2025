@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 399cd42775bfe2940a2b9536cfcae2af, type: 3}
   m_Name: 2
   m_EditorClassIdentifier: 
-  npcText: What is your favourite hobby?
+  npcText: Oh no, you seem to be quite confused. Lets make it easier for you
   playerChoices:
   - text: volleyball
     nextDialogueNode: {fileID: 11400000, guid: 61d0fed6c741b8c4a9c1651610eaf394, type: 2}
@@ -20,3 +20,4 @@ MonoBehaviour:
     nextDialogueNode: {fileID: 11400000, guid: 6a8967b0b0a3740488187b5bc5abfabe, type: 2}
   - text: basketball
     nextDialogueNode: {fileID: 11400000, guid: 306c8fea38acd6a4a97a5edf01b0e131, type: 2}
+  requireMinigame: 0

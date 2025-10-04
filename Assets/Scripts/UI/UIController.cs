@@ -25,13 +25,21 @@ public class UIController : MonoBehaviour
     public void LoadDialogueNode(DialogueNode node)
     {
         textQuestion.text = node.npcText;
-        for (int i = 0; i < node.playerChoices.Count; i++)
+        for (int i = 0; i < textOptions.Length; i++)
         {
             TextMeshProUGUI textMesh = textOptions[i];
-            textMesh.text = node.playerChoices[i].text;
+            if (i < node.playerChoices.Count)
+            {
+                textMesh.gameObject.SetActive(true);
+                textMesh.text = node.playerChoices[i].text;
 
-            Button textMeshButton = textMesh.GetComponent<Button>();
-            textMeshButton.interactable = !node.requireMinigame;
+                Button textMeshButton = textMesh.GetComponent<Button>();
+                textMeshButton.interactable = !node.requireMinigame;
+            } else
+            {
+                textMesh.gameObject.SetActive(false);
+            }
+            
         }
     }
 
