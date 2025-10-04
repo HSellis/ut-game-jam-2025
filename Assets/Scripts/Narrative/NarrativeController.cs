@@ -31,7 +31,7 @@ public class NarrativeController : MonoBehaviour
 
         if (node.requireMinigame)
         {
-            BringMaze();
+            mazeController.EnableMaze();
         }
 
         currentDialogueNode = node;
@@ -44,19 +44,9 @@ public class NarrativeController : MonoBehaviour
         
     }
 
-    public void BringMaze()
-    {
-        mazeController.EnableMaze();
-    }
-
-    public void MoveAwayMaze()
-    {
-        mazeController.DisableMaze();
-    }
-
     public void MazeCompleted(int exitNumber)
     {
-        MoveAwayMaze();
+        mazeController.DisableMaze();
         ProgressDialogue(exitNumber);
     }
 }

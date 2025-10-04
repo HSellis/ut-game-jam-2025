@@ -20,6 +20,15 @@ public class MazeHole : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        maze.onBallExit(number);
+        Ball ball = other.GetComponent<Ball>();
+        if (ball != null)
+        {
+            Invoke("CompleteMaze", 2f);
+        }
+    }
+
+    private void CompleteMaze()
+    {
+        maze.OnBallExit(number);
     }
 }
