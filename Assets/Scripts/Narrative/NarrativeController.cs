@@ -22,14 +22,26 @@ public class NarrativeController : MonoBehaviour
 
     public void StartDialogue()
     {
-        UIController.LoadDialogueNode(currentDialogueNode);
+        LoadDialogueNode(currentDialogueNode);
     }
 
-    public void ProgressDialogue(int playerTextOptionNumber)
+    private void LoadDialogueNode(DialogueNode node)
     {
-        DialogueNode nextDialogueNode = currentDialogueNode.playerChoices[playerTextOptionNumber].nextDialogueNode;
-        UIController.LoadDialogueNode(nextDialogueNode);
-        currentDialogueNode = nextDialogueNode;
+        UIController.LoadDialogueNode(node);
+
+        if (node.requireMinigame)
+        {
+            BringMaze();
+        }
+
+        currentDialogueNode = node;
+    }
+
+    public void ProgressDialogue(int selectedOptionNumber)
+    {
+        DialogueNode nextDialogueNode = currentDialogueNode.playerChoices[selectedOptionNumber].nextDialogueNode;
+        LoadDialogueNode(nextDialogueNode);
+        
     }
 
     public void BringMaze()
@@ -45,5 +57,6 @@ public class NarrativeController : MonoBehaviour
     public void MazeCompleted(int exitNumber)
     {
         MoveAwayMaze();
+        ProgressDialogue(exitNumber);
     }
 }

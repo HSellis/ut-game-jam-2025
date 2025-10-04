@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 399cd42775bfe2940a2b9536cfcae2af, type: 3}
   m_Name: 4
   m_EditorClassIdentifier: 
-  npcText: What you?
+  npcText: Do maze
   playerChoices:
   - text: A
     nextDialogueNode: {fileID: 11400000, guid: 61d0fed6c741b8c4a9c1651610eaf394, type: 2}
@@ -20,3 +20,4 @@ MonoBehaviour:
     nextDialogueNode: {fileID: 11400000, guid: 40b006a0491991d47b33e7e2cc9fe848, type: 2}
   - text: C
     nextDialogueNode: {fileID: 11400000, guid: 6a8967b0b0a3740488187b5bc5abfabe, type: 2}
+  requireMinigame: 1
