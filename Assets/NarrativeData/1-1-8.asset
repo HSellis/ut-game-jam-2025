@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 399cd42775bfe2940a2b9536cfcae2af, type: 3}
+  m_Name: 1-1-8
+  m_EditorClassIdentifier: 
+  npcText: OMG that is so cool. I didnt know I could meet another LPS fan in the
+    wild tehehe. We should totally hang out and talk a lot about these things.
+  playerChoices:
+  - text: YES!
+    nextDialogueNode: {fileID: 11400000, guid: 115dfa0aa1d04a54093433f220edc64b, type: 2}
+  - text: 'Yes, I''d love to. '
+    nextDialogueNode: {fileID: 11400000, guid: 115dfa0aa1d04a54093433f220edc64b, type: 2}
+  - text: 'No, I think I have many other things to do. '
+    nextDialogueNode: {fileID: 11400000, guid: 681eff371eaee994f8a7d4078aeb43d2, type: 2}
+  requireMinigame: 1

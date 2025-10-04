@@ -48,22 +48,22 @@ public class NarrativeController : MonoBehaviour
         DialogueNode nextDialogueNode = currentDialogueNode.playerChoices[selectedOptionNumber].nextDialogueNode;
 
         if (currentDialogueNode.requireMinigame) {
-            // Wait 2 sec
-            StartCoroutine(ProgressDialogueWithDelay(2f, nextDialogueNode));
+            StartCoroutine(RemoveMazeWithDelay(1f));
+            StartCoroutine(ProgressDialogueWithDelay(3.5f, nextDialogueNode));
         } else {
             LoadDialogueNode(nextDialogueNode);
         }
-        
-        
+    }
+
+    IEnumerator RemoveMazeWithDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        mazeController.RemoveMaze();
     }
 
     IEnumerator ProgressDialogueWithDelay(float delay, DialogueNode dialogNode)
     {
         yield return new WaitForSeconds(delay);
-        if (currentDialogueNode.requireMinigame)
-        {
-            mazeController.RemoveMaze();
-        }
         LoadDialogueNode(dialogNode);
     }
 

@@ -10,14 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 399cd42775bfe2940a2b9536cfcae2af, type: 3}
-  m_Name: 4
+  m_Name: 1-1-4
   m_EditorClassIdentifier: 
-  npcText: Do maze
+  npcText: Silly, it was more than enough, you are a real life saver. You dont know
+    how much this means to me
   playerChoices:
-  - text: A
-    nextDialogueNode: {fileID: 11400000, guid: 61d0fed6c741b8c4a9c1651610eaf394, type: 2}
-  - text: B
-    nextDialogueNode: {fileID: 11400000, guid: 40b006a0491991d47b33e7e2cc9fe848, type: 2}
-  - text: C
-    nextDialogueNode: {fileID: 11400000, guid: 6a8967b0b0a3740488187b5bc5abfabe, type: 2}
-  requireMinigame: 1
+  - text: Do you really like pet shops?
+    nextDialogueNode: {fileID: 11400000, guid: cf295fb88fd9ce849ae23fed9a65088a, type: 2}
+  requireMinigame: 0

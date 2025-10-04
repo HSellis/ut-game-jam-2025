@@ -10,12 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 399cd42775bfe2940a2b9536cfcae2af, type: 3}
-  m_Name: 1
+  m_Name: 1-1-41
   m_EditorClassIdentifier: 
-  npcText: Are cats trees?
+  npcText: Anyway, thank you so much! You dont know how much this means for me
   playerChoices:
-  - text: Sometimes
-    nextDialogueNode: {fileID: 11400000, guid: 40b006a0491991d47b33e7e2cc9fe848, type: 2}
-  - text: No
-    nextDialogueNode: {fileID: 11400000, guid: 6a8967b0b0a3740488187b5bc5abfabe, type: 2}
-  requireMinigame: 0
+  - text: So.. You really like Pet Shops?
+    nextDialogueNode: {fileID: 11400000, guid: cf295fb88fd9ce849ae23fed9a65088a, type: 2}
+  requireMinigame: 1

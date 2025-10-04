@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 399cd42775bfe2940a2b9536cfcae2af, type: 3}
+  m_Name: 1-1-6
+  m_EditorClassIdentifier: 
+  npcText: Oops sorry, here I am yapping about my favorite hobby again. I just really
+    like collecting them. Do you like Pet Shops?
+  playerChoices:
+  - text: '*lie* Yeah I love all the pet shops. My favorite is the dog one'
+    nextDialogueNode: {fileID: 11400000, guid: 3e641803be1b9cd4db20735010fa98c6, type: 2}
+  - text: No, I think collecting childrens toys is childish.
+    nextDialogueNode: {fileID: 11400000, guid: 736bcea4080664d48ad1ad54c7af9a0a, type: 2}
+  - text: Yes, but I dont know much about them. Can you tell me more about them
+    nextDialogueNode: {fileID: 11400000, guid: 191e3490533534546adcd4d73294fece, type: 2}
+  requireMinigame: 1

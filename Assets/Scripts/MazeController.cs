@@ -83,6 +83,7 @@ public class MazeController : MonoBehaviour
     public void RemoveMaze()
     {
         Destroy(ball.gameObject);
+        ball = null;
         currentMaze.transform.DOMove(downPosition, animationSpeed);
         Invoke("DestroyMaze", animationSpeed);
     }
@@ -95,5 +96,6 @@ public class MazeController : MonoBehaviour
     private void DestroyMaze()
     {
         Destroy(currentMaze.gameObject);
+        currentMaze = null;
     }
 }

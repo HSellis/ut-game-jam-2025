@@ -10,15 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 399cd42775bfe2940a2b9536cfcae2af, type: 3}
-  m_Name: 3
+  m_Name: 1-1-2
   m_EditorClassIdentifier: 
-  npcText: Now you know how to play this game! Good luck! Do it one more time and
-    you can play the game!
+  npcText: You see a small pet shop toy fall from their pockets What do you do?
   playerChoices:
-  - text: money
-    nextDialogueNode: {fileID: 11400000, guid: 61d0fed6c741b8c4a9c1651610eaf394, type: 2}
-  - text: keys
+  - text: "*pick it up* and catch up to her  \t\"Sorry, I think you dropped this\""
     nextDialogueNode: {fileID: 11400000, guid: 40b006a0491991d47b33e7e2cc9fe848, type: 2}
-  - text: your mom
-    nextDialogueNode: {fileID: 11400000, guid: 306c8fea38acd6a4a97a5edf01b0e131, type: 2}
-  requireMinigame: 0
+  - text: Steal it
+    nextDialogueNode: {fileID: 11400000, guid: 6a8967b0b0a3740488187b5bc5abfabe, type: 2}
+  - text: Nothing
+    nextDialogueNode: {fileID: 11400000, guid: 6a8967b0b0a3740488187b5bc5abfabe, type: 2}
+  requireMinigame: 1
