@@ -1,0 +1,36 @@
+using UnityEngine;
+using UnityEngine.Audio;
+
+public class AudioManager : MonoBehaviour
+{
+    public static AudioManager Instance { get; private set; }
+    public AudioMixer masterMixer; // assign in Inspector
+    const string MUSIC_PARAM = "MusicVol";
+
+    void Awake()
+    {
+        if (Instance != null && Instance != this) { Destroy(gameObject); return; }
+        Instance = this;
+        DontDestroyOnLoad(gameObject); // persists so slider works across scenes
+    }
+
+    // 0..1 from the slider
+    public void SetMusicVolume(float linear01)
+    {
+        float v = Mathf.Clamp(linear01, 0.0001f, 1f);
+        float dB = Mathf.Log10(v) * 20f; // convert linear to decibels
+        masterMixer.SetFloat(MUSIC_PARAM, dB);
+    }
+
+    // Handy to sync the slider when opening the settings panel
+    public float GetMusicVolume(out float linear01)
+    {
+        if (masterMixer.GetFloat(MUSIC_PARAM, out float dB))
+        {
+            linear01 = Mathf.Pow(10f, dB / 20f);
+            return linear01;
+        }
+        linear01 = 1f;
+        return linear01;
+    }
+}
