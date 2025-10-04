@@ -49,7 +49,7 @@ public class MazeController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        
+        /*
         float accelerationRateX = Mathf.Sin(mazeTransform.rotation.eulerAngles.x * Mathf.PI / 180);
         float accelerationRateZ = Mathf.Sin(mazeTransform.rotation.eulerAngles.z * Mathf.PI / 180);
         //Debug.Log(Time.fixedDeltaTime);
@@ -58,6 +58,7 @@ public class MazeController : MonoBehaviour
         ballRigidBody.AddForce(ballAcceleration, ForceMode.VelocityChange);
         // ballRigidBody.linearVelocity += ballAcceleration;
         //Debug.Log(ballRigidBody.linearVelocity);
+        */
         
     }
 
