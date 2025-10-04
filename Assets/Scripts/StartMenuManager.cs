@@ -22,7 +22,7 @@ public class StartMenuManager : MonoBehaviour
 
     public void OnPlayPressed()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("MainScene");
     }
 
     public void OnQuitPressed()
