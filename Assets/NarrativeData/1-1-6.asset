@@ -17,8 +17,11 @@ MonoBehaviour:
   playerChoices:
   - text: '*lie* Yeah I love all the pet shops. My favorite is the dog one'
     nextDialogueNode: {fileID: 11400000, guid: 3e641803be1b9cd4db20735010fa98c6, type: 2}
+    result: 1
   - text: No, I think collecting childrens toys is childish.
     nextDialogueNode: {fileID: 11400000, guid: 736bcea4080664d48ad1ad54c7af9a0a, type: 2}
+    result: 0
   - text: Yes, but I dont know much about them. Can you tell me more about them
     nextDialogueNode: {fileID: 11400000, guid: 191e3490533534546adcd4d73294fece, type: 2}
+    result: 2
   requireMinigame: 1

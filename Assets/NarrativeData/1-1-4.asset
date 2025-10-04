@@ -17,4 +17,5 @@ MonoBehaviour:
   playerChoices:
   - text: Do you really like pet shops?
     nextDialogueNode: {fileID: 11400000, guid: cf295fb88fd9ce849ae23fed9a65088a, type: 2}
+    result: 1
   requireMinigame: 0
