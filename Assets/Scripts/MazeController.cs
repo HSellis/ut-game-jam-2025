@@ -1,13 +1,18 @@
 using DG.Tweening;
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class MazeController : MonoBehaviour
 {
-    public Maze maze;
+    public Maze[] oneExitMazes;
+    public Maze[] twoExitMazes;
+    public Maze[] threeExitMazes;
+
     public Ball ballPrefab;
     private Ball ball;
-    private Transform mazeTransform;
     private Rigidbody ballRigidBody;
+    private Maze currentMaze;
 
     public float rotationSpeed = 10;
     public float animationSpeed = 2;
@@ -20,31 +25,33 @@ public class MazeController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        mazeTransform = maze.transform;
-        //ballRigidBody = ball.GetComponent<Rigidbody>();
+        currentMaze = null;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.W))
+        if (currentMaze != null)
         {
-            mazeTransform.Rotate(Vector3.right, rotationSpeed * Time.deltaTime);
-        }
+            if (Input.GetKey(KeyCode.W))
+            {
+                currentMaze.transform.Rotate(Vector3.right, rotationSpeed * Time.deltaTime);
+            }
 
-        if (Input.GetKey(KeyCode.S))
-        {
-            mazeTransform.Rotate(Vector3.left, rotationSpeed * Time.deltaTime);
-        }
+            if (Input.GetKey(KeyCode.S))
+            {
+                currentMaze.transform.Rotate(Vector3.left, rotationSpeed * Time.deltaTime);
+            }
 
-        if (Input.GetKey(KeyCode.A))
-        {
-            mazeTransform.Rotate(Vector3.forward, rotationSpeed * Time.deltaTime);
-        }
+            if (Input.GetKey(KeyCode.A))
+            {
+                currentMaze.transform.Rotate(Vector3.forward, rotationSpeed * Time.deltaTime);
+            }
 
-        if (Input.GetKey(KeyCode.D))
-        {
-            mazeTransform.Rotate(Vector3.back, rotationSpeed * Time.deltaTime);
+            if (Input.GetKey(KeyCode.D))
+            {
+                currentMaze.transform.Rotate(Vector3.back, rotationSpeed * Time.deltaTime);
+            }
         }
     }
 
@@ -64,21 +71,44 @@ public class MazeController : MonoBehaviour
     }
 
 
-    public void EnableMaze()
+    public void SpawnMaze(int exitHolesNumber)
     {
-        mazeTransform.DOMove(upPosition, animationSpeed);
+        Maze[] possibleMazes;
+        if (exitHolesNumber == 1)
+        {
+            possibleMazes = oneExitMazes;
+        } else if (exitHolesNumber == 2)
+        {
+            possibleMazes = twoExitMazes;
+        } else
+        {
+            possibleMazes = threeExitMazes;
+        }
+
+
+        int randomIndex = UnityEngine.Random.Range(0, possibleMazes.Length);
+        Maze selectedMaze = possibleMazes[randomIndex];
+        currentMaze = Instantiate(selectedMaze, downPosition, Quaternion.identity);
+
+        currentMaze.transform.DOMove(upPosition, animationSpeed);
         Invoke("SpawnBall", animationSpeed + 0.5f);
 
     }
 
-    public void DisableMaze()
+    public void RemoveMaze()
     {
         Destroy(ball.gameObject);
-        mazeTransform.DOMove(downPosition, animationSpeed);
+        currentMaze.transform.DOMove(downPosition, animationSpeed);
+        Invoke("DestroyMaze", animationSpeed);
     }
 
     private void SpawnBall()
     {
-        ball = Instantiate(ballPrefab, maze.spawnLocation.position, Quaternion.identity);
+        ball = Instantiate(ballPrefab, currentMaze.spawnLocation.position, Quaternion.identity);
+    }
+
+    private void DestroyMaze()
+    {
+        Destroy(currentMaze.gameObject);
     }
 }

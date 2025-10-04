@@ -32,7 +32,7 @@ public class NarrativeController : MonoBehaviour
 
         if (node.requireMinigame)
         {
-            mazeController.EnableMaze();
+            mazeController.SpawnMaze(node.playerChoices.Count);
         }
 
         currentDialogueNode = node;
@@ -43,7 +43,6 @@ public class NarrativeController : MonoBehaviour
         if (currentDialogueNode.requireMinigame)
         {
             UIController.SelectTextOption(selectedOptionNumber);
-            mazeController.DisableMaze();
         }
         
         DialogueNode nextDialogueNode = currentDialogueNode.playerChoices[selectedOptionNumber].nextDialogueNode;
@@ -61,6 +60,10 @@ public class NarrativeController : MonoBehaviour
     IEnumerator ProgressDialogueWithDelay(float delay, DialogueNode dialogNode)
     {
         yield return new WaitForSeconds(delay);
+        if (currentDialogueNode.requireMinigame)
+        {
+            mazeController.RemoveMaze();
+        }
         LoadDialogueNode(dialogNode);
     }
 

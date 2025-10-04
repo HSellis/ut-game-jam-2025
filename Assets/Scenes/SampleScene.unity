@@ -700,6 +700,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Maze2
       objectReference: {fileID: 0}
+    - target: {fileID: 466932893739427169, guid: 3ab34c2cbc6f88144ab2f89b1e35bbfc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 740433925912117768, guid: 3ab34c2cbc6f88144ab2f89b1e35bbfc, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -2992,8 +2996,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c13246e91c3ccad4e9845f44520279db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maze: {fileID: 2053577477}
-  ball: {fileID: 4445034849142915775, guid: 4996e7a21109e134a9bc2a7e9f52992b, type: 3}
+  oneExitMazes:
+  - {fileID: 6836463214983305067, guid: 28ef92ff8296e6e408961032d342a0c2, type: 3}
+  twoExitMazes:
+  - {fileID: 1421711170232101663, guid: 348e4212801420243b1313d860d22ce8, type: 3}
+  - {fileID: 7633948130550422744, guid: c44d7a2a6b155004d835e2697a9a3ab9, type: 3}
+  - {fileID: 1884759920109192082, guid: 234f3ab00fbccd743a35d769692f8d1b, type: 3}
+  threeExitMazes:
+  - {fileID: 8843997704642745766, guid: cd1a1f7e5c6a8b341a704d68ea908291, type: 3}
+  - {fileID: 7568148709041330169, guid: 3ab34c2cbc6f88144ab2f89b1e35bbfc, type: 3}
+  - {fileID: 960626752945563823, guid: fdae0d8c6d86b9c42b7ade7d75c3059b, type: 3}
+  ballPrefab: {fileID: 9032079599976380483, guid: 4996e7a21109e134a9bc2a7e9f52992b, type: 3}
   rotationSpeed: 15
   animationSpeed: 2
   ballAccelerationRate: 99999
@@ -3438,17 +3451,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2015368315}
   m_CullTransparentMesh: 1
---- !u!114 &2053577477 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7568148709041330169, guid: 3ab34c2cbc6f88144ab2f89b1e35bbfc, type: 3}
-  m_PrefabInstance: {fileID: 405712184}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50a652f17dd6a9f48895edd51b9f373b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
