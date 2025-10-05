@@ -25,17 +25,30 @@ public class NarrativeController : MonoBehaviour
     private Dictionary<DialogueOptionResult, int> resultToDelta = 
         new Dictionary<DialogueOptionResult, int> 
         {
-            {DialogueOptionResult.POSITIVE, 1},
+            {DialogueOptionResult.POSITIVE, 5},
             {DialogueOptionResult.NEUTRAL, 0},
-            {DialogueOptionResult.NEGATIVE, -1}
+            {DialogueOptionResult.NEGATIVE, -3}
 
         };
 
+    private Dictionary<string, int> sceneToCharacterIndex =
+    new Dictionary<string, int>
+    {
+            {"MainScene", 0},
+            {"MainScene2", 1}
+    };
+
+    private int activeCharacterIndex = 0;
+
     void Awake()
     {
+        activeCharacterIndex = sceneToCharacterIndex[SceneManager.GetActiveScene().name];
+        Debug.Log("AWAKE");
+        Debug.Log(activeCharacterIndex);
+
+
         if (Instance != null && Instance != this)
         {
-            Debug.Log("DESTROYING NARRATIVE CONTROLLER");
             Destroy(gameObject);
             return;
         }
@@ -81,7 +94,7 @@ public class NarrativeController : MonoBehaviour
     {
         UIController.ShowDialogResult(currentDialogueNode.playerChoices[selectedOptionNumber].result);
 
-        int who = currentDialogueNode.characterIndex;
+        int who = activeCharacterIndex;
 
         Debug.Log(who);
         scores[who] = scores[who] + resultToDelta[currentDialogueNode.playerChoices[selectedOptionNumber].result];
@@ -110,7 +123,7 @@ public class NarrativeController : MonoBehaviour
 
     private void TryFinishRoute()
     {
-        int who = currentDialogueNode.characterIndex;
+        int who = activeCharacterIndex;
 
         if (!routeFinished[who])
         {

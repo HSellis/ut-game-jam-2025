@@ -12,6 +12,7 @@ public class EndingInitializer : MonoBehaviour
     {
 
         narrativeController = NarrativeController.Instance;
+        Debug.Log(narrativeController);
         string target = narrativeController.GetEndingPanelName();
 
         //var toShow = GameObject.Find(target);
