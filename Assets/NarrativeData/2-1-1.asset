@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcText: This is the start of the second story
   playerChoices:
-  - text: Amongus
-    nextDialogueNode: {fileID: 11400000, guid: c52a25ca9d48a7c43aeebb5d61b60f44, type: 2}
-    result: 0
+  - text: Start the second story
+    nextDialogueNode: {fileID: 0}
+    result: 1
   requireMinigame: 0
