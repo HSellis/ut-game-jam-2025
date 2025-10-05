@@ -59,6 +59,9 @@ public class UIController : MonoBehaviour
                 } else
                 {
                     textMesh.color = defaultColor;
+                    textMesh.fontMaterial = new Material(textMesh.fontMaterial);
+                    textMesh.fontMaterial.SetColor("_OutlineColor", defaultColor);
+                    textMesh.fontMaterial.SetFloat("_OutlineWidth", 0.2f);
                     textMeshButton.enabled = true;
                 }
                 
