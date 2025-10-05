@@ -141,11 +141,19 @@ public class NarrativeController : MonoBehaviour
         currentRizz = 0;
 
         activeCharacterIndex++;
-        string nextCharacterScene = characterSceneNames[activeCharacterIndex];
-        SceneManager.LoadScene(nextCharacterScene);
+        if (activeCharacterIndex < characterSceneNames.Length)
+        {
+            string nextCharacterScene = characterSceneNames[activeCharacterIndex];
+            SceneManager.LoadScene(nextCharacterScene);
 
-        Invoke("FindManagers", 0.1f);
-        Invoke("StartDialogue", 0.25f);
+            Invoke("FindManagers", 0.1f);
+            Invoke("StartDialogue", 0.25f);
+        }
+        else
+        {
+            SceneManager.LoadScene(endingSceneName);
+        }
+
     }
 
     public int GetEndingNumber()
