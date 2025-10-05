@@ -15,6 +15,6 @@ MonoBehaviour:
   npcText: Really? Thanks! This is the best compliment I've had this whole year!
   playerChoices:
   - text: 'That is really sad. Your collection of compiments should be bigger. '
-    nextDialogueNode: {fileID: 11400000, guid: 61d0fed6c741b8c4a9c1651610eaf394, type: 2}
+    nextDialogueNode: {fileID: 11400000, guid: cf10a1f5052c28849aac2e703f24dcbc, type: 2}
     result: 1
   requireMinigame: 0

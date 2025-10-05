@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 399cd42775bfe2940a2b9536cfcae2af, type: 3}
   m_Name: 2-1-6
   m_EditorClassIdentifier: 
-  npcText: 
+  npcText: 'Speaking of collecting things, I really like to collect things. '
   playerChoices:
-  - text: Hey, smiley face. How are you doing?
+  - text: ' <'
     nextDialogueNode: {fileID: 11400000, guid: 04ec83fd9aee61c4099b263f0c07f7a5, type: 2}
     result: 0
   requireMinigame: 0
