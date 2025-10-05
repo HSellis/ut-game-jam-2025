@@ -1511,9 +1511,11 @@ MonoBehaviour:
   - {fileID: 7568148709041330169, guid: 3ab34c2cbc6f88144ab2f89b1e35bbfc, type: 3}
   - {fileID: 960626752945563823, guid: fdae0d8c6d86b9c42b7ade7d75c3059b, type: 3}
   ballPrefab: {fileID: 9032079599976380483, guid: 4996e7a21109e134a9bc2a7e9f52992b, type: 3}
+  rizzOrbPrefab: {fileID: 4974955616468181654, guid: 821991ade7786f448b11e0055a6a9ac5, type: 3}
   rotationSpeed: 15
   animationSpeed: 2
-  ballAccelerationRate: 99999
+  rizzOrbCount: 5
+  rizzOrbSpawnDistance: 4
   upPosition: {x: 0, y: 0, z: 0}
   downPosition: {x: 0, y: -25, z: -10}
 --- !u!114 &1746299019
@@ -1531,6 +1533,8 @@ MonoBehaviour:
   currentDialogueNode: {fileID: 11400000, guid: 022d054b66610894495592e38dadb90d, type: 2}
   mazeController: {fileID: 1746299018}
   UIController: {fileID: 1463581680}
+  goodThreshold: 5
+  neutralThreshold: 3
 --- !u!1 &1994509497
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,4 +1,5 @@
 using DG.Tweening;
+using JetBrains.Annotations;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,14 +11,15 @@ public class MazeController : MonoBehaviour
     public Maze[] threeExitMazes;
 
     public Ball ballPrefab;
+    public RizzOrb rizzOrbPrefab;
+
     private Ball ball;
-    private Rigidbody ballRigidBody;
     private Maze currentMaze;
 
     public float rotationSpeed = 10;
     public float animationSpeed = 2;
-
-    public float ballAccelerationRate = 20;
+    public float rizzOrbCount = 5;
+    public float rizzOrbSpawnDistance = 4;
 
     public Vector3 upPosition;
     public Vector3 downPosition;
@@ -77,6 +79,7 @@ public class MazeController : MonoBehaviour
 
         currentMaze.transform.DOMove(upPosition, animationSpeed);
         Invoke("SpawnBall", animationSpeed + 0.5f);
+        Invoke("SpawnRizzOrbs", animationSpeed + 0.5f);
 
     }
 
@@ -91,6 +94,18 @@ public class MazeController : MonoBehaviour
     private void SpawnBall()
     {
         ball = Instantiate(ballPrefab, currentMaze.spawnLocation.position, Quaternion.identity);
+    }
+
+    private void SpawnRizzOrbs()
+    {
+        for (int i = 0; i < rizzOrbCount; i++)
+        {
+            float offsetX = UnityEngine.Random.Range(-rizzOrbSpawnDistance, rizzOrbSpawnDistance);
+            float offsetZ = UnityEngine.Random.Range(-rizzOrbSpawnDistance, rizzOrbSpawnDistance);
+
+            Vector3 rizzOrbPos = currentMaze.transform.position + new Vector3(offsetX, 3, offsetZ);
+            Instantiate(rizzOrbPrefab, rizzOrbPos, Quaternion.identity);
+        }
     }
 
     private void DestroyMaze()
