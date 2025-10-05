@@ -12,11 +12,8 @@ public class EndingInitializer : MonoBehaviour
     {
 
         narrativeController = NarrativeController.Instance;
-        Debug.Log(narrativeController);
         string target = narrativeController.GetEndingPanelName();
 
-        Debug.Log(target);
-        Debug.Log(GameObject.Find(target));
         //var toShow = GameObject.Find(target);
         //toShow.SetActive(true);
 

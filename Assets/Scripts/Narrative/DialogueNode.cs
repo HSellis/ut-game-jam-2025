@@ -30,7 +30,7 @@ public class DialogueNode : ScriptableObject
     public List<DialogueOption> playerChoices;
     public bool requireMinigame;
 
-    public int characterIndex = 0;
+    public int characterIndex;
     public bool IsFinalNode
     {
         get {

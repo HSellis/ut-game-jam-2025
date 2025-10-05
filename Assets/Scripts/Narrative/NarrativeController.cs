@@ -4,7 +4,6 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-[DefaultExecutionOrder(-1000)]
 public class NarrativeController : MonoBehaviour
 {
     public static NarrativeController Instance { get; private set; }
@@ -16,7 +15,7 @@ public class NarrativeController : MonoBehaviour
     // Neid võib vahetada kui tundub liiga kerge/raske
     public int goodThreshold = 5;
     public int neutralThreshold = 3;
-    public string endingSceneName = "EndScreen";
+    private string endingSceneName = "EndScreen";
 
     // Eeldades et 1 karakterit on, tee suuremaks kui rohkem
     private int[] scores = new int[1];
@@ -83,6 +82,8 @@ public class NarrativeController : MonoBehaviour
         UIController.ShowDialogResult(currentDialogueNode.playerChoices[selectedOptionNumber].result);
 
         int who = currentDialogueNode.characterIndex;
+
+        Debug.Log(who);
         scores[who] = scores[who] + resultToDelta[currentDialogueNode.playerChoices[selectedOptionNumber].result];
 
         DialogueNode nextDialogueNode = currentDialogueNode.playerChoices[selectedOptionNumber].nextDialogueNode;
@@ -117,11 +118,9 @@ public class NarrativeController : MonoBehaviour
             finishedCount++;
         }
 
-        Debug.Log(finishedCount);
         // Kui kõik tegelased on teinud dialoguei ära kui 2 korda on dialogue lõppu jõudnud
         if (finishedCount >= 1)
         {
-            Debug.Log("Try open ending scene");
             SceneManager.LoadScene(endingSceneName);
         }
         else
@@ -133,6 +132,8 @@ public class NarrativeController : MonoBehaviour
 
     public string GetEndingPanelName()
     {
+
+        Debug.Log(string.Join(",", scores));
         int numGood = scores.Count(v => v >= goodThreshold);
         int numNeutral = scores.Count(v => v >= neutralThreshold && v < goodThreshold);
 
