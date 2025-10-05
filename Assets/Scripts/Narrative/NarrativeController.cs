@@ -25,9 +25,9 @@ public class NarrativeController : MonoBehaviour
     private Dictionary<DialogueOptionResult, int> resultToDelta = 
         new Dictionary<DialogueOptionResult, int> 
         {
-            {DialogueOptionResult.POSITIVE, 1},
+            {DialogueOptionResult.POSITIVE, 5},
             {DialogueOptionResult.NEUTRAL, 0},
-            {DialogueOptionResult.NEGATIVE, -1}
+            {DialogueOptionResult.NEGATIVE, -3}
 
         };
 
