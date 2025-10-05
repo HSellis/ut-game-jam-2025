@@ -14,14 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcText: Anyways! What do you want to do now?
   playerChoices:
-  - text: Hey, smiley face. How are you doing?
-    nextDialogueNode: {fileID: 11400000, guid: 04ec83fd9aee61c4099b263f0c07f7a5, type: 2}
-    result: 1
-  - text: Hey, smiley face. How are you doing?
-    nextDialogueNode: {fileID: 11400000, guid: 04ec83fd9aee61c4099b263f0c07f7a5, type: 2}
-    result: 1
+  - text: You could always invite me over to your place and show me your collection:)
+    nextDialogueNode: {fileID: 11400000, guid: a889061b7a19ee44c9ea92677901ec81, type: 2}
+    result: 2
   - text: Hey, smiley face. How are you doing?
     nextDialogueNode: {fileID: 11400000, guid: 04ec83fd9aee61c4099b263f0c07f7a5, type: 2}
     result: 1
   requireMinigame: 1
-  characterIndex: 0

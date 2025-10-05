@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 399cd42775bfe2940a2b9536cfcae2af, type: 3}
   m_Name: 1-3-69
   m_EditorClassIdentifier: 
-  npcText: '*The beutiful august sun shines through the curtains* *You look at this
+  npcText: '*The beautiful august sun shines through the curtains* *You look at this
     woman, whos heart makes your own beat so fast. Deep down you know, her heart
     belongs to you*'
   playerChoices:
@@ -20,4 +20,3 @@ MonoBehaviour:
     nextDialogueNode: {fileID: 11400000, guid: 210cd485d9e7eb749a0c92645900eb59, type: 2}
     result: 1
   requireMinigame: 0
-  characterIndex: 0

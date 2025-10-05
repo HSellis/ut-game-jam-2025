@@ -12,9 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 399cd42775bfe2940a2b9536cfcae2af, type: 3}
   m_Name: 2-1-6
   m_EditorClassIdentifier: 
-  npcText: 'Speaking of collecting things, I really like to collect things. '
+  npcText: 'Anyway, I am Erkki from Finland. I am a vet. student here in Tartu. *a
+    few moments of awkward silence* Speaking of collecting things, I really like
+    to collect things. '
   playerChoices:
-  - text: ' <'
-    nextDialogueNode: {fileID: 11400000, guid: 04ec83fd9aee61c4099b263f0c07f7a5, type: 2}
+  - text: I'm Grimm, nice to meet you. What do you collect?
+    nextDialogueNode: {fileID: 11400000, guid: e7a50274e29f4524e8364c9a8208d406, type: 2}
+    result: 1
+  - text: Uh okay
+    nextDialogueNode: {fileID: 11400000, guid: e7a50274e29f4524e8364c9a8208d406, type: 2}
     result: 0
-  requireMinigame: 0
+  requireMinigame: 1
