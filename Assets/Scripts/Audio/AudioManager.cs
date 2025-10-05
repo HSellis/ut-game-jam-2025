@@ -9,7 +9,7 @@ public class AudioManager : MonoBehaviour
     const string MUSIC_PARAM = "MusicVol";
 
     public AudioResource mainMenuTheme;
-    public AudioResource character1Theme;
+    public AudioResource[] characterThemes;
     public AudioClip buttonClickSound;
     public AudioClip[] rizzSounds;
 
@@ -44,9 +44,9 @@ public class AudioManager : MonoBehaviour
         return linear01;
     }
 
-    public void PlayCharacter1Theme()
+    public void PlayCharacterTheme(int index)
     {
-        audioSource.resource = character1Theme;
+        audioSource.resource = characterThemes[index];
         audioSource.Play();
     }
 
