@@ -10,6 +10,8 @@ public class AudioManager : MonoBehaviour
 
     public AudioResource mainMenuTheme;
     public AudioResource character1Theme;
+    public AudioClip buttonClickSound;
+    public AudioClip[] rizzSounds;
 
     void Awake()
     {
@@ -46,5 +48,16 @@ public class AudioManager : MonoBehaviour
     {
         audioSource.resource = character1Theme;
         audioSource.Play();
+    }
+
+    public void PlayButtonClickSound()
+    {
+        audioSource.PlayOneShot(buttonClickSound);
+    }
+
+    public void PlayRizzSound()
+    {
+        int index = Random.Range(0, rizzSounds.Length);
+        audioSource.PlayOneShot(rizzSounds[index]);
     }
 }

@@ -1325,6 +1325,13 @@ MonoBehaviour:
   masterMixer: {fileID: 24100000, guid: ef86a9cabfdb50f4daeefc92610097c5, type: 2}
   mainMenuTheme: {fileID: 8300000, guid: 8c242116dc0d29641ad8b211ab62eee9, type: 3}
   character1Theme: {fileID: 8300000, guid: 6927d6b5f351621488bc8843e91aebc4, type: 3}
+  buttonClickSound: {fileID: 8300000, guid: 61e18b2eefb076a4889595aa2577cd5a, type: 3}
+  rizzSounds:
+  - {fileID: 8300000, guid: 6b7a31d355b80034984fb5e34b6dac68, type: 3}
+  - {fileID: 8300000, guid: c89ac55a851b746448fae1f4bd2b6ae8, type: 3}
+  - {fileID: 8300000, guid: 2023546a7b487c143af627dbbb4cf958, type: 3}
+  - {fileID: 8300000, guid: 2a88143cc6a7cc7408061d91af33abb6, type: 3}
+  - {fileID: 8300000, guid: ec475ed49095c314f93efacbd50e3c7e, type: 3}
 --- !u!4 &1220751247
 Transform:
   m_ObjectHideFlags: 0

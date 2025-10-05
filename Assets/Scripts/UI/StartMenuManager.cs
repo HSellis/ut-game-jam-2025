@@ -25,23 +25,27 @@ public class StartMenuManager : MonoBehaviour
     public void OnPlayPressed()
     {
         audioManager.PlayCharacter1Theme();
+        audioManager.PlayButtonClickSound();
         SceneManager.LoadScene("MainScene");
     }
 
     public void OnQuitPressed()
     {
+        audioManager.PlayButtonClickSound();
         Application.Quit();
         Debug.Log("Exiting Game");
     }
 
     public void OnOpenSettings()
     {
+        audioManager.PlayButtonClickSound();
         mainPanel.SetActive(false);
         settingsPanel.SetActive(true);
     }
 
     public void OnBackFromSettings()
     {
+        audioManager.PlayButtonClickSound();
         settingsPanel.SetActive(false);
         mainPanel.SetActive(true);
     }
