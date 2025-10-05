@@ -50,7 +50,10 @@ public class UIController : MonoBehaviour
                 
                 if (node.requireMinigame)
                 {
-                    textMesh.color = optionColors[i];
+                    textMesh.color = Color.black;
+                    textMesh.fontMaterial = new Material(textMesh.fontMaterial);
+                    textMesh.fontMaterial.SetColor("_OutlineColor", optionColors[i]);
+                    textMesh.fontMaterial.SetFloat("_OutlineWidth", 0.2f);
                     textMeshButton.enabled = false;
                 } else
                 {
