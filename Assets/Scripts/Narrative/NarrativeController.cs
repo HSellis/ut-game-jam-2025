@@ -10,6 +10,7 @@ public class NarrativeController : MonoBehaviour
 
     private MazeController mazeController;
     private UIController UIController;
+    private AudioManager audioManager;
     
 
     private int activeCharacterIndex = 0;
@@ -56,6 +57,7 @@ public class NarrativeController : MonoBehaviour
     {
         mazeController = GameObject.Find("MazeController").GetComponent<MazeController>();
         UIController = GameObject.Find("UICanvas").GetComponent<UIController>();
+        audioManager = gameObject.GetComponent<AudioManager>();
     }
 
     // Update is called once per frame
@@ -75,6 +77,8 @@ public class NarrativeController : MonoBehaviour
         DialogueNode startingNode = sceneStartingNodes[activeCharacterIndex];
         currentDialogueNode = startingNode;
         LoadDialogueNode(currentDialogueNode);
+
+        audioManager.PlayCharacterTheme(activeCharacterIndex);
     }
 
     private void LoadDialogueNode(DialogueNode node)
@@ -151,6 +155,7 @@ public class NarrativeController : MonoBehaviour
         else
         {
             SceneManager.LoadScene(endingSceneName);
+            audioManager.StopBackgroundMusic();
         }
 
     }

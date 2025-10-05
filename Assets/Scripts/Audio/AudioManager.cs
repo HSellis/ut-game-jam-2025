@@ -50,6 +50,11 @@ public class AudioManager : MonoBehaviour
         audioSource.Play();
     }
 
+    public void StopBackgroundMusic()
+    {
+        audioSource.Stop();
+    }
+
     public void PlayButtonClickSound()
     {
         audioSource.PlayOneShot(buttonClickSound);

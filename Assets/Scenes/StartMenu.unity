@@ -1883,7 +1883,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   masterMixer: {fileID: 24100000, guid: ef86a9cabfdb50f4daeefc92610097c5, type: 2}
-  mainMenuTheme: {fileID: 8300000, guid: 8c242116dc0d29641ad8b211ab62eee9, type: 3}
+  mainMenuTheme: {fileID: 8300000, guid: 74a869adf8f0f184387c7057738b8d6e, type: 3}
   characterThemes:
   - {fileID: 8300000, guid: 74a869adf8f0f184387c7057738b8d6e, type: 3}
   - {fileID: 8300000, guid: 6927d6b5f351621488bc8843e91aebc4, type: 3}
@@ -1920,7 +1920,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 4710525666230503692, guid: ef86a9cabfdb50f4daeefc92610097c5, type: 2}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 8c242116dc0d29641ad8b211ab62eee9, type: 3}
+  m_Resource: {fileID: 8300000, guid: 9389204947d5e5047bea8f4343e81893, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.749
   m_Pitch: 1

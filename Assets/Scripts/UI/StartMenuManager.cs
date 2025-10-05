@@ -26,7 +26,6 @@ public class StartMenuManager : MonoBehaviour
 
     public void OnPlayPressed()
     {
-        audioManager.PlayCharacterTheme(0);
         audioManager.PlayButtonClickSound();
         narrativeController.LoadFirstCharacter();
     }
