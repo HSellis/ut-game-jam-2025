@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 399cd42775bfe2940a2b9536cfcae2af, type: 3}
   m_Name: 1-1-5
   m_EditorClassIdentifier: 
-  npcText: "Yesss. Littlest Pet Shops are the coolest thing ever. Like, have you
-    seen how tiny and adorable they are? Each one has its own little personality,
-    and the eyes? Don\u2019t even get me started on the eyes. They\u2019re like,
-    sparkly portals to a world of cuteness."
+  npcText: "Yesss. These little pet shop toys aka LPS-s are the coolest thing ever.
+    Like, have you seen how tiny and adorable they are? Each one has its own little
+    personality, and the eyes? Don\u2019t even get me started on the eyes. They\u2019re
+    like, sparkly portals to a world of cuteness."
   playerChoices:
   - text: Continue
     nextDialogueNode: {fileID: 11400000, guid: d9fdd727b99054943bb482419dac21e1, type: 2}
     result: 1
   requireMinigame: 0
+  characterIndex: 0

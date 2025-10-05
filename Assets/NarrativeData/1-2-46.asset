@@ -10,16 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 399cd42775bfe2940a2b9536cfcae2af, type: 3}
-  m_Name: 1-1-41
+  m_Name: 1-2-46
   m_EditorClassIdentifier: 
-  npcText: Anyway, thank you so much! You dont know how much this means for me. I'm
-    Blythe btw.
+  npcText: I see, intersting. A bit too morbid of a colour for me, but it totally
+    matches you! *She seems happy again, you feel like you have fixed your former
+    blunder*
   playerChoices:
-  - text: Nice to meet you! I am Grimm.
-    nextDialogueNode: {fileID: 11400000, guid: 968c5bda260d5e54e9a42c3edbc2eafe, type: 2}
+  - text: hahah thanks
+    nextDialogueNode: {fileID: 11400000, guid: 9c9f2fea537a1f84c88dd49ede17306b, type: 2}
     result: 2
-  - text: 'I would tell you my name, but it is too Grimm. '
-    nextDialogueNode: {fileID: 11400000, guid: 968c5bda260d5e54e9a42c3edbc2eafe, type: 2}
+  - text: '*stay silent and mysterious*'
+    nextDialogueNode: {fileID: 11400000, guid: 9c9f2fea537a1f84c88dd49ede17306b, type: 2}
     result: 1
   requireMinigame: 0
   characterIndex: 0

@@ -10,13 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 399cd42775bfe2940a2b9536cfcae2af, type: 3}
-  m_Name: 1-1-71
+  m_Name: 1-2-41
   m_EditorClassIdentifier: 
-  npcText: Oh okay. But thanks for giving this back to me. See you around.   *she
-    walks away, leaving you forever wondering what could've been*
+  npcText: Oh I am very sorry to hear that. *You feel like you blundered a bit. Better
+    fix this with a compliment*
   playerChoices:
-  - text: Continue
-    nextDialogueNode: {fileID: 11400000, guid: 681eff371eaee994f8a7d4078aeb43d2, type: 2}
+  - text: What is your favorite colour?
+    nextDialogueNode: {fileID: 11400000, guid: d57c6e404b6b95c4da0a672e59586b43, type: 2}
     result: 1
+  - text: 'I love how you collect pet shops, can I collect your heart? '
+    nextDialogueNode: {fileID: 11400000, guid: 3d5744d7ef592064b962b9c09759b644, type: 2}
+    result: 2
   requireMinigame: 1
   characterIndex: 0

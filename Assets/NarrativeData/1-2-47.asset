@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 399cd42775bfe2940a2b9536cfcae2af, type: 3}
-  m_Name: demplate
+  m_Name: 1-2-47
   m_EditorClassIdentifier: 
-  npcText: 
+  npcText: '*She blushes from your forwardness, giving you hope that her heart can
+    be yours* Oh my, Grimm. I did not know you too felt like this about me...'
   playerChoices:
-  - text: Hey, smiley face. How are you doing?
-    nextDialogueNode: {fileID: 11400000, guid: 04ec83fd9aee61c4099b263f0c07f7a5, type: 2}
+  - text: Continue
+    nextDialogueNode: {fileID: 11400000, guid: a889061b7a19ee44c9ea92677901ec81, type: 2}
     result: 1
   requireMinigame: 0
   characterIndex: 0

@@ -10,13 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 399cd42775bfe2940a2b9536cfcae2af, type: 3}
-  m_Name: 1-1-71
+  m_Name: 1-3-79
   m_EditorClassIdentifier: 
-  npcText: Oh okay. But thanks for giving this back to me. See you around.   *she
-    walks away, leaving you forever wondering what could've been*
+  npcText: '*She looks into your dark eyes with with her own piercing blue gaze*
+    What''s on your heart, Grimm?'
   playerChoices:
-  - text: Continue
-    nextDialogueNode: {fileID: 11400000, guid: 681eff371eaee994f8a7d4078aeb43d2, type: 2}
+  - text: Can we both give eachother our all, our very hearts?
+    nextDialogueNode: {fileID: 11400000, guid: 9c554379aa3809144b8359630f79c11f, type: 2}
     result: 1
+  - text: Can I stinky this place up?
+    nextDialogueNode: {fileID: 11400000, guid: 8a254ead1bc8c7742ba2f79885fc48be, type: 2}
+    result: 0
   requireMinigame: 1
   characterIndex: 0
