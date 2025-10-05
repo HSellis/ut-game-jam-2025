@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 399cd42775bfe2940a2b9536cfcae2af, type: 3}
+  m_Name: 2-1-7
+  m_EditorClassIdentifier: 
+  npcText: try to guess hee hee
+  playerChoices:
+  - text: Idk, bad jackets?
+    nextDialogueNode: {fileID: 11400000, guid: 4fae4453b90b7df4690e4a3aea41e743, type: 2}
+    result: 1
+  - text: Hmm I think I should ask more questions of you first
+    nextDialogueNode: {fileID: 11400000, guid: d43294084485a09448be730cd8fb7b83, type: 2}
+    result: 1
+  - text: Wonster energy drinks!
+    nextDialogueNode: {fileID: 11400000, guid: bbc03e931ef0cd84b9a58225690528ee, type: 2}
+    result: 1
+  requireMinigame: 1

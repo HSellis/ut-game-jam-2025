@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 399cd42775bfe2940a2b9536cfcae2af, type: 3}
-  m_Name: 1-3-79
+  m_Name: 2-1-7-2
   m_EditorClassIdentifier: 
-  npcText: '*She looks into your dark eyes with with her own piercing blue gaze*
-    What''s on your heart, Grimm?'
+  npcText: '*He gives you his first real smile of the coversation* That is it! How
+    did you know! '
   playerChoices:
-  - text: Can we both give eachother our all, our very hearts?
-    nextDialogueNode: {fileID: 11400000, guid: 9c554379aa3809144b8359630f79c11f, type: 2}
+  - text: You have a Wonster in your pocket, silly *laughs*
+    nextDialogueNode: {fileID: 11400000, guid: 6b2d22d7788d90141a168af460ea2168, type: 2}
     result: 2
-  - text: Can I stinky this place up?
-    nextDialogueNode: {fileID: 11400000, guid: 8a254ead1bc8c7742ba2f79885fc48be, type: 2}
+  - text: I have been stalking you for 4 days now
+    nextDialogueNode: {fileID: 11400000, guid: 590d81baac3e0ad4f86f92d7d761b134, type: 2}
     result: 0
   requireMinigame: 1

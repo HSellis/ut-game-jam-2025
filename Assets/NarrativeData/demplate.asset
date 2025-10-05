@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcText: 
   playerChoices:
-  - text: Hey, smiley face. How are you doing?
-    nextDialogueNode: {fileID: 11400000, guid: 04ec83fd9aee61c4099b263f0c07f7a5, type: 2}
+  - text: Huh
+    nextDialogueNode: {fileID: 11400000, guid: bb3bcad143d08674495c23f7fddc3bc7, type: 2}
     result: 1
   requireMinigame: 0
-  characterIndex: 0

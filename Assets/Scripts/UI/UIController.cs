@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
-    public NarrativeController narrativeController;
+    private NarrativeController narrativeController;
     public AudioManager audioManager;
 
     public TextMeshProUGUI textQuestion;
@@ -25,6 +25,7 @@ public class UIController : MonoBehaviour
     void Start()
     {
         audioManager = AudioManager.Instance;
+        narrativeController = NarrativeController.Instance;
     }
 
     // Update is called once per frame

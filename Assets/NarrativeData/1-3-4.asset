@@ -17,10 +17,9 @@ MonoBehaviour:
     one in the whole world?
   playerChoices:
   - text: Wow, really?
-    nextDialogueNode: {fileID: 11400000, guid: 04ec83fd9aee61c4099b263f0c07f7a5, type: 2}
+    nextDialogueNode: {fileID: 11400000, guid: 3a218e97bf45e5e4d870425ab43a2633, type: 2}
     result: 1
   - text: You know what else is the 115th biggest in the world?
     nextDialogueNode: {fileID: 11400000, guid: adb8328188468944f9b79dda0c97b8b3, type: 2}
     result: 1
   requireMinigame: 1
-  characterIndex: 0

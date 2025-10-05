@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 399cd42775bfe2940a2b9536cfcae2af, type: 3}
+  m_Name: 2-1-8
+  m_EditorClassIdentifier: 
+  npcText: Uhoh so anyway... I collect Wonster energy drink cans in my room. I have
+    13 different variaties of Wonster! What do you collect?
+  playerChoices:
+  - text: 'That is cool! I should have guessed since you have a Wonster in your pocket
+      even right now. '
+    nextDialogueNode: {fileID: 11400000, guid: 6b2d22d7788d90141a168af460ea2168, type: 2}
+    result: 1
+  - text: 'I hoped you would have a cooler hobby. I don''t think this will work out. '
+    nextDialogueNode: {fileID: 11400000, guid: e82c0c55ea48eb944a68e816b4ccbb58, type: 2}
+    result: 0
+  requireMinigame: 1
