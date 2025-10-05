@@ -25,8 +25,8 @@ public class NarrativeController : MonoBehaviour
     };
     private Dictionary<int, int> characterRizzThresholds = new Dictionary<int, int>
     {
-        {0, 10},
-        {1, 10},
+        {0, 45},
+        {1, 45},
     };
 
     private string[] characterSceneNames = new string[] { "MainScene", "MainScene2" };
