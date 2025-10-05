@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 399cd42775bfe2940a2b9536cfcae2af, type: 3}
   m_Name: 1-1-3
   m_EditorClassIdentifier: 
-  npcText: '*she turns around. First surprise covers her face, quickly switching
+  npcText: '*she turns around. First, surprise covers her face, quickly switching
     into happiness*  Oh my god thank youuu so much! I wouldve cried if I had lost
     my precious.'
   playerChoices:
@@ -26,3 +26,4 @@ MonoBehaviour:
     nextDialogueNode: {fileID: 11400000, guid: 9827e8ed5db4e7444b3d8a86d60f4228, type: 2}
     result: 0
   requireMinigame: 0
+  characterIndex: 0

@@ -10,12 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 399cd42775bfe2940a2b9536cfcae2af, type: 3}
-  m_Name: demplate
+  m_Name: 1-2-4
   m_EditorClassIdentifier: 
-  npcText: 
+  npcText: Yay. thanks for saying that, Grimm. You are the best!
   playerChoices:
-  - text: Hey, smiley face. How are you doing?
-    nextDialogueNode: {fileID: 11400000, guid: 04ec83fd9aee61c4099b263f0c07f7a5, type: 2}
+  - text: Of course! I am happy to see someone care about collecting things as deeply
+      as I do.
+    nextDialogueNode: {fileID: 11400000, guid: 05fcb0543396684428d646d46f84a492, type: 2}
+    result: 2
+  - text: I sure am! What is your favorite colour btw?
+    nextDialogueNode: {fileID: 11400000, guid: d57c6e404b6b95c4da0a672e59586b43, type: 2}
     result: 1
   requireMinigame: 0
   characterIndex: 0

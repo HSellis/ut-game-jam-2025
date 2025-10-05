@@ -10,12 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 399cd42775bfe2940a2b9536cfcae2af, type: 3}
-  m_Name: demplate
+  m_Name: 1-2-5
   m_EditorClassIdentifier: 
-  npcText: 
+  npcText: Anyways! What do you want to do now?
   playerChoices:
   - text: Hey, smiley face. How are you doing?
     nextDialogueNode: {fileID: 11400000, guid: 04ec83fd9aee61c4099b263f0c07f7a5, type: 2}
     result: 1
-  requireMinigame: 0
+  - text: Hey, smiley face. How are you doing?
+    nextDialogueNode: {fileID: 11400000, guid: 04ec83fd9aee61c4099b263f0c07f7a5, type: 2}
+    result: 1
+  - text: Hey, smiley face. How are you doing?
+    nextDialogueNode: {fileID: 11400000, guid: 04ec83fd9aee61c4099b263f0c07f7a5, type: 2}
+    result: 1
+  requireMinigame: 1
   characterIndex: 0

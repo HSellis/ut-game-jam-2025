@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 399cd42775bfe2940a2b9536cfcae2af, type: 3}
-  m_Name: demplate
+  m_Name: 1-2-2
   m_EditorClassIdentifier: 
-  npcText: 
+  npcText: '*Blythe laughs happily* That was so fun, I havent had fun like that in
+    ages! Thank you for being willing to do this with me.'
   playerChoices:
-  - text: Hey, smiley face. How are you doing?
-    nextDialogueNode: {fileID: 11400000, guid: 04ec83fd9aee61c4099b263f0c07f7a5, type: 2}
+  - text: Continue
+    nextDialogueNode: {fileID: 11400000, guid: 1f1134c62a8a4f146b54d4a92f3bd33e, type: 2}
     result: 1
   requireMinigame: 0
   characterIndex: 0

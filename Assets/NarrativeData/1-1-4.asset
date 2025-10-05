@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 399cd42775bfe2940a2b9536cfcae2af, type: 3}
   m_Name: 1-1-4
   m_EditorClassIdentifier: 
-  npcText: Silly, it was more than enough, you are a real life saver. You dont know
-    how much this means to me
+  npcText: Silly, it was more than enough, you are a real life saver. You don't know
+    how much this means to me. I'm Blythe btw.
   playerChoices:
-  - text: Do you really like pet shops?
-    nextDialogueNode: {fileID: 11400000, guid: cf295fb88fd9ce849ae23fed9a65088a, type: 2}
-    result: 1
+  - text: I'm called Grimm
+    nextDialogueNode: {fileID: 11400000, guid: 968c5bda260d5e54e9a42c3edbc2eafe, type: 2}
+    result: 2
   requireMinigame: 0
+  characterIndex: 0
