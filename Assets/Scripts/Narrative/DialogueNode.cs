@@ -30,6 +30,15 @@ public class DialogueNode : ScriptableObject
     public List<DialogueOption> playerChoices;
     public bool requireMinigame;
 
+    public int characterIndex = 0;
+    public bool IsFinalNode
+    {
+        get {
+            return playerChoices == null || playerChoices.Count == 0 || playerChoices.TrueForAll(c => c.nextDialogueNode == null);
+        }
+    }
+
+
     public DialogueNode(string npcText, List<DialogueOption> playerChoices)
     {
         this.npcText = npcText;
