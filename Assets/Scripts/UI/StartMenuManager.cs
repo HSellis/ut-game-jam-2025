@@ -7,6 +7,7 @@ public class StartMenuManager : MonoBehaviour
 
     public GameObject mainPanel;
     public GameObject settingsPanel;
+    public GameObject tutorialPanel;
 
     public AudioManager audioManager;
 
@@ -32,6 +33,18 @@ public class StartMenuManager : MonoBehaviour
     {
         Application.Quit();
         Debug.Log("Exiting Game");
+    }
+
+    public void OnTutorialPressed()
+    {
+        mainPanel.SetActive(false);
+        tutorialPanel.SetActive(true);
+    }
+
+    public void OnBackFromTutorial()
+    {
+        tutorialPanel.SetActive(false);
+        mainPanel.SetActive(true);
     }
 
     public void OnOpenSettings()
