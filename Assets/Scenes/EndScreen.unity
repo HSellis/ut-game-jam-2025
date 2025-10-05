@@ -2423,9 +2423,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   narrativeController: {fileID: 0}
-  badEndingPanel: {fileID: 0}
-  NeutralEndingPanel: {fileID: 0}
-  goodEndingPanel: {fileID: 0}
+  badEndingPanel: {fileID: 1901460033}
+  NeutralEndingPanel: {fileID: 484278547}
+  goodEndingPanel: {fileID: 1418893584}
 --- !u!4 &1844355666
 Transform:
   m_ObjectHideFlags: 0
