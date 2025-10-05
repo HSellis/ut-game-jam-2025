@@ -16,6 +16,6 @@ MonoBehaviour:
     to you. Better luck next time. '
   playerChoices:
   - text: You walk back home, unsatisfied
-    nextDialogueNode: {fileID: 11400000}
+    nextDialogueNode: {fileID: 0}
     result: 1
   requireMinigame: 0

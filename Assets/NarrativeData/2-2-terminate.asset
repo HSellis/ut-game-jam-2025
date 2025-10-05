@@ -15,6 +15,6 @@ MonoBehaviour:
   npcText: 
   playerChoices:
   - text: Huh
-    nextDialogueNode: {fileID: 11400000, guid: bb3bcad143d08674495c23f7fddc3bc7, type: 2}
+    nextDialogueNode: {fileID: 0}
     result: 1
   requireMinigame: 0
