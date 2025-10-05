@@ -100,7 +100,6 @@ public class NarrativeController : MonoBehaviour
 
         int who = activeCharacterIndex;
 
-        Debug.Log(who);
         AddRizz(resultToDelta[currentDialogueNode.playerChoices[selectedOptionNumber].result]);
 
         DialogueNode nextDialogueNode = currentDialogueNode.playerChoices[selectedOptionNumber].nextDialogueNode;
@@ -128,7 +127,7 @@ public class NarrativeController : MonoBehaviour
     public void LoadFirstCharacter()
     {
         activeCharacterIndex = 0;
-        SceneManager.LoadScene(activeCharacterIndex);
+        SceneManager.LoadScene(characterSceneNames[activeCharacterIndex]);
 
         Invoke("FindManagers", 0.1f);
         Invoke("StartDialogue", 0.25f);
