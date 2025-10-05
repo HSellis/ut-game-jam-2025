@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 399cd42775bfe2940a2b9536cfcae2af, type: 3}
+  m_Name: 1-2-47
+  m_EditorClassIdentifier: 
+  npcText: '*She blushes from your forwardness, giving you hope that her heart can
+    be yours* Oh my, Grimm. I did not know you too felt like this about me...'
+  playerChoices:
+  - text: Continue
+    nextDialogueNode: {fileID: 11400000, guid: a889061b7a19ee44c9ea92677901ec81, type: 2}
+    result: 1
+  requireMinigame: 0
+  characterIndex: 0

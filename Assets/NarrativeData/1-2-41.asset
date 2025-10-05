@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 399cd42775bfe2940a2b9536cfcae2af, type: 3}
+  m_Name: 1-2-41
+  m_EditorClassIdentifier: 
+  npcText: Oh I am very sorry to hear that. *You feel like you blundered a bit. Better
+    fix this with a compliment*
+  playerChoices:
+  - text: What is your favorite colour?
+    nextDialogueNode: {fileID: 11400000, guid: d57c6e404b6b95c4da0a672e59586b43, type: 2}
+    result: 1
+  - text: 'I love how you collect pet shops, can I collect your heart? '
+    nextDialogueNode: {fileID: 11400000, guid: 3d5744d7ef592064b962b9c09759b644, type: 2}
+    result: 2
+  requireMinigame: 1
+  characterIndex: 0

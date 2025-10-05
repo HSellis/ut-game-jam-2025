@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 399cd42775bfe2940a2b9536cfcae2af, type: 3}
   m_Name: 1-1-72
   m_EditorClassIdentifier: 
-  npcText: '*she seems to be not believing you, but continues on nonetheless* *She
-    seems sceptical*  What is your favorite LPS youtube video?'
+  npcText: '*she seems to not believing you, but continues on nonetheless* *She seems
+    sceptical*  What is your favorite LPS youtube video?'
   playerChoices:
   - text: Mr Woof
     nextDialogueNode: {fileID: 11400000, guid: fb593ee306d69414f88a5748d81ecf83, type: 2}
@@ -25,3 +25,4 @@ MonoBehaviour:
     nextDialogueNode: {fileID: 11400000, guid: a42cfb5030d42f7449557453c19dfbb4, type: 2}
     result: 1
   requireMinigame: 1
+  characterIndex: 0

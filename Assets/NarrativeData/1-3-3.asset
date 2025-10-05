@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 399cd42775bfe2940a2b9536cfcae2af, type: 3}
+  m_Name: 1-3-3
+  m_EditorClassIdentifier: 
+  npcText: '*Blythe leads you to a beautiful sideroom filled with over a dozen rows
+    and rows of small toy pets* This is my humble collection.  it is not much but
+    I am very proud of it!'
+  playerChoices:
+  - text: ' Are you kidding me, this is a huge '
+    nextDialogueNode: {fileID: 11400000, guid: fbdb2c507a14e4e4eb28e96b051a5f91, type: 2}
+    result: 1
+  requireMinigame: 0
+  characterIndex: 0

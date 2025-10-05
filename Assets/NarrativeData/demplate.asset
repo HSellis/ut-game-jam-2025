@@ -16,5 +16,6 @@ MonoBehaviour:
   playerChoices:
   - text: Hey, smiley face. How are you doing?
     nextDialogueNode: {fileID: 11400000, guid: 04ec83fd9aee61c4099b263f0c07f7a5, type: 2}
-    result: 0
+    result: 1
   requireMinigame: 0
+  characterIndex: 0

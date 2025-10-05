@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 399cd42775bfe2940a2b9536cfcae2af, type: 3}
+  m_Name: 1-3-4
+  m_EditorClassIdentifier: 
+  npcText: Okay-okay, you are right I have put too much effort into this to not be
+    a little bit proud of it.  Do you know that my collection is the 115th biggest
+    one in the whole world?
+  playerChoices:
+  - text: Wow, really?
+    nextDialogueNode: {fileID: 11400000, guid: 04ec83fd9aee61c4099b263f0c07f7a5, type: 2}
+    result: 1
+  - text: You know what else is the 115th biggest in the world?
+    nextDialogueNode: {fileID: 11400000, guid: adb8328188468944f9b79dda0c97b8b3, type: 2}
+    result: 1
+  requireMinigame: 1
+  characterIndex: 0

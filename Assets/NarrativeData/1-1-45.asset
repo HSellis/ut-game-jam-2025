@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 399cd42775bfe2940a2b9536cfcae2af, type: 3}
+  m_Name: 1-1-45
+  m_EditorClassIdentifier: 
+  npcText: '*Blythe smiles and you shake hands*  Nice to meet you!'
+  playerChoices:
+  - text: So.. You really like Pet Shops?
+    nextDialogueNode: {fileID: 11400000, guid: cf295fb88fd9ce849ae23fed9a65088a, type: 2}
+    result: 1
+  requireMinigame: 0
+  characterIndex: 0

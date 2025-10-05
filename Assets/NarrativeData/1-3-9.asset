@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 399cd42775bfe2940a2b9536cfcae2af, type: 3}
+  m_Name: 1-3-9
+  m_EditorClassIdentifier: 
+  npcText: Grimm, I would have never tought someone so mysterious would be such a
+    poet.  *she smiles lovingly* We dont know eachother for such a long time, but
+    I think.. I think i can trust you to have my heart:)
+  playerChoices:
+  - text: You did it. You have her heart:3
+    nextDialogueNode: {fileID: 11400000, guid: 759324c99f44a674ab798fa347b3c575, type: 2}
+    result: 1
+  requireMinigame: 0
+  characterIndex: 0

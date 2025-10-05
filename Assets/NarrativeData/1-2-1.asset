@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 399cd42775bfe2940a2b9536cfcae2af, type: 3}
   m_Name: 1-2-1
   m_EditorClassIdentifier: 
-  npcText: Siit algab act 2 esimesele tegalsele.
+  npcText: '*you have just come back from your first date (?)* *You two went to the
+    epic toys store and both bought a lil collectable*'
   playerChoices:
-  - text: Yes I'd love to!
-    nextDialogueNode: {fileID: 11400000, guid: 61d0fed6c741b8c4a9c1651610eaf394, type: 2}
-  - text: ' No, I think I have many other things to do.'
-    nextDialogueNode: {fileID: 11400000, guid: 61d0fed6c741b8c4a9c1651610eaf394, type: 2}
-  requireMinigame: 1
+  - text: Continue
+    nextDialogueNode: {fileID: 11400000, guid: 70e9e3be41e490748b2fece41e016420, type: 2}
+    result: 1
+  requireMinigame: 0
+  characterIndex: 0

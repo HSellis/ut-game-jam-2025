@@ -26,7 +26,7 @@ public class NarrativeController : MonoBehaviour
     };
     private Dictionary<int, int> characterRizzThresholds = new Dictionary<int, int>
     {
-        {0, 10 },
+        {0, 10},
         {1, 10},
     };
 
