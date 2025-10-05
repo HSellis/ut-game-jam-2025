@@ -9,6 +9,7 @@ public class VideoPanelController : MonoBehaviour
     public GameObject neutralEndingPanel;
     public GameObject badEndingPanel;
 
+    public NarrativeController narrativeController;
     private VideoPlayer activeVideoPlayer;
     private GameObject activeButtonsContainer;
 
@@ -17,19 +18,28 @@ public class VideoPanelController : MonoBehaviour
         // Hide all buttons initially
         HideAllButtons();
 
-        // Find which panel is active in the scene
-        if (goodEndingPanel.activeSelf)
-            SetupPanel(goodEndingPanel);
-        else if (neutralEndingPanel.activeSelf)
-            SetupPanel(neutralEndingPanel);
-        else if (badEndingPanel.activeSelf)
-            SetupPanel(badEndingPanel);
-        else
-            Debug.LogWarning("No ending panel is active!");
+        narrativeController = NarrativeController.Instance;
+        int endingNumber = narrativeController.GetEndingNumber();
+        switch (endingNumber)
+        {
+            case 0:
+                SetupPanel(badEndingPanel);
+                break;
+            case 1:
+                SetupPanel(neutralEndingPanel);
+                break;
+            case 2:
+                SetupPanel(goodEndingPanel);
+                break;
+        }
+
+        
+
     }
 
     void SetupPanel(GameObject panel)
     {
+        panel.SetActive(true);
         // Get references inside this panel
         activeVideoPlayer = panel.GetComponentInChildren<VideoPlayer>(true);
         activeButtonsContainer = panel.transform.Find("ButtonsContainer").gameObject;
@@ -52,6 +62,7 @@ public class VideoPanelController : MonoBehaviour
 
     void OnVideoEnd(VideoPlayer vp)
     {
+        Debug.Log("Video ended");
         // Show only this panel's buttons when video ends
         if (activeButtonsContainer != null)
             activeButtonsContainer.SetActive(true);
