@@ -1,6 +1,5 @@
 using UnityEngine;
-using UnityEngine.Rendering;
-using UnityEngine.SceneManagement;
+
 
 public class StartMenuManager : MonoBehaviour
 {
@@ -10,11 +9,13 @@ public class StartMenuManager : MonoBehaviour
     public GameObject tutorialPanel;
 
     public AudioManager audioManager;
+    public NarrativeController narrativeController;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         audioManager = AudioManager.Instance;
+        narrativeController = NarrativeController.Instance;
     }
 
     // Update is called once per frame
@@ -25,9 +26,9 @@ public class StartMenuManager : MonoBehaviour
 
     public void OnPlayPressed()
     {
-        audioManager.PlayCharacter1Theme();
+        audioManager.PlayCharacterTheme(0);
         audioManager.PlayButtonClickSound();
-        SceneManager.LoadScene("MainScene");
+        narrativeController.LoadFirstCharacter();
     }
 
     public void OnQuitPressed()

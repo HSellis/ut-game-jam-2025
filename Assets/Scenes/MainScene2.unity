@@ -1658,7 +1658,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 983703c51463cba47b10f0669561c9ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  narrativeController: {fileID: 1746299019}
+  narrativeController: {fileID: 0}
+  audioManager: {fileID: 0}
   textQuestion: {fileID: 989685718}
   textOptions:
   - {fileID: 2015368318}
@@ -1679,9 +1680,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1746299017}
   - component: {fileID: 1746299018}
-  - component: {fileID: 1746299019}
   m_Layer: 0
-  m_Name: GameController
+  m_Name: MazeController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1732,21 +1732,6 @@ MonoBehaviour:
   rizzOrbSpawnDistance: 4
   upPosition: {x: 0, y: 0, z: 0}
   downPosition: {x: 0, y: -25, z: -10}
---- !u!114 &1746299019
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1746299016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f338bb3a8b4de4240950771a6f06d43c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentDialogueNode: {fileID: 11400000, guid: 52496704ec658524996f0ae8fa1df684, type: 2}
-  mazeController: {fileID: 1746299018}
-  UIController: {fileID: 1463581680}
 --- !u!1 &1994509497
 GameObject:
   m_ObjectHideFlags: 0
