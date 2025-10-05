@@ -10,12 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 399cd42775bfe2940a2b9536cfcae2af, type: 3}
-  m_Name: 2-2-BAD
+  m_Name: 2-2-2
   m_EditorClassIdentifier: 
-  npcText: 'Sadly, he seems to have become distant and refuses to dedicate his heart
-    to you. Better luck next time. '
+  npcText: '*he looks happy and proud* Thanks! I really tried my hardest. '
   playerChoices:
-  - text: You walk back home, unsatisfied
-    nextDialogueNode: {fileID: 11400000}
+  - text: '*try to kiss him*'
+    nextDialogueNode: {fileID: 11400000, guid: 39c9e57021782c84fa0ca7ff15073d09, type: 2}
+    result: 0
+  - text: '*ask to see the Wonster can collection*'
+    nextDialogueNode: {fileID: 11400000, guid: 39c9e57021782c84fa0ca7ff15073d09, type: 2}
     result: 1
   requireMinigame: 0

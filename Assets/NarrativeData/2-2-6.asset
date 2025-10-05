@@ -10,11 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 399cd42775bfe2940a2b9536cfcae2af, type: 3}
-  m_Name: demplate 2
+  m_Name: 2-2-6
   m_EditorClassIdentifier: 
-  npcText: 
+  npcText: '*he seems a bit confused, but also flattered* I guess I would say that.
+    Why do you ask?'
   playerChoices:
-  - text: Huh
-    nextDialogueNode: {fileID: 11400000, guid: bb3bcad143d08674495c23f7fddc3bc7, type: 2}
+  - text: Nothing:) I think your heart is very beautiful, that's all:) *you lean
+      in to kiss him*
+    nextDialogueNode: {fileID: 11400000, guid: 07dd8304f0ac6294981cc579203178dc, type: 2}
     result: 1
   requireMinigame: 0

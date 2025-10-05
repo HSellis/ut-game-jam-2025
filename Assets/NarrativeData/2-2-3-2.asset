@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 399cd42775bfe2940a2b9536cfcae2af, type: 3}
-  m_Name: demplate
+  m_Name: 2-2-3-2
   m_EditorClassIdentifier: 
-  npcText: 
+  npcText: '*he looks mad that you are interrupting him yapping about this important
+    topic* Try to focus please. So anyway as I was saying..'
   playerChoices:
-  - text: Huh
-    nextDialogueNode: {fileID: 11400000, guid: bb3bcad143d08674495c23f7fddc3bc7, type: 2}
+  - text: '*you feel a bit bad, but try to listen'
+    nextDialogueNode: {fileID: 11400000, guid: c14a4eae98fd9444a8712a074d3c72fb, type: 2}
     result: 1
   requireMinigame: 0

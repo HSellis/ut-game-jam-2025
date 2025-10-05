@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 399cd42775bfe2940a2b9536cfcae2af, type: 3}
   m_Name: 2-1-1
   m_EditorClassIdentifier: 
-  npcText: 'Siit algab 2 tegelasega lugu. '
+  npcText: This is the start of the second story
   playerChoices:
   - text: Amongus
     nextDialogueNode: {fileID: 11400000, guid: 61d0fed6c741b8c4a9c1651610eaf394, type: 2}

@@ -17,5 +17,5 @@ MonoBehaviour:
   playerChoices:
   - text: 'Wow that is quite good '
     nextDialogueNode: {fileID: 11400000, guid: bb3bcad143d08674495c23f7fddc3bc7, type: 2}
-    result: 1
+    result: 2
   requireMinigame: 0

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 399cd42775bfe2940a2b9536cfcae2af, type: 3}
+  m_Name: 2-2-5
+  m_EditorClassIdentifier: 
+  npcText: '*He looks very flattered* Wow that is the best, and I guess only, compliment
+    I have heard this entire year. '
+  playerChoices:
+  - text: Aww you poor thing. Anyway I want to say that as I myself am a collector,
+      it is super cool to see your excitement!
+    nextDialogueNode: {fileID: 11400000, guid: 07dd8304f0ac6294981cc579203178dc, type: 2}
+    result: 2
+  - text: Just give me your heart, I listened to your long monologue
+    nextDialogueNode: {fileID: 11400000, guid: 987e54e38a1ee7444896cb5283076189, type: 2}
+    result: 0
+  - text: I think you are amazing. Would you say that you were giving me your heart
+      by talking about your passion like this?
+    nextDialogueNode: {fileID: 11400000, guid: 279145031208504438bbbb17991d77bc, type: 2}
+    result: 2
+  requireMinigame: 1

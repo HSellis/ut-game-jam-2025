@@ -10,12 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 399cd42775bfe2940a2b9536cfcae2af, type: 3}
-  m_Name: 2-2-BAD
+  m_Name: template
   m_EditorClassIdentifier: 
-  npcText: 'Sadly, he seems to have become distant and refuses to dedicate his heart
-    to you. Better luck next time. '
+  npcText: 
   playerChoices:
-  - text: You walk back home, unsatisfied
-    nextDialogueNode: {fileID: 11400000}
+  - text: Huh
+    nextDialogueNode: {fileID: 11400000, guid: bb3bcad143d08674495c23f7fddc3bc7, type: 2}
     result: 1
   requireMinigame: 0
