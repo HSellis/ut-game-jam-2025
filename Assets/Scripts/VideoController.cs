@@ -70,6 +70,6 @@ public class VideoPanelController : MonoBehaviour
     // Called by your button
     public void LoadMainMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("StartMenu");
     }
 }
