@@ -1747,8 +1747,6 @@ MonoBehaviour:
   currentDialogueNode: {fileID: 11400000, guid: 022d054b66610894495592e38dadb90d, type: 2}
   mazeController: {fileID: 1746299018}
   UIController: {fileID: 1463581680}
-  goodThreshold: 5
-  neutralThreshold: 3
 --- !u!1 &1994509497
 GameObject:
   m_ObjectHideFlags: 0

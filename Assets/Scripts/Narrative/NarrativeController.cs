@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,26 +11,24 @@ public class NarrativeController : MonoBehaviour
     public MazeController mazeController;
     public UIController UIController;
 
-    // Neid võib vahetada kui tundub liiga kerge/raske
-    public int goodThreshold = 5;
-    public int neutralThreshold = 3;
     private string endingSceneName = "EndScreen";
 
-    // Eeldades et 1 karakterit on, tee suuremaks kui rohkem
-    private int[] scores = new int[1];
-    private bool[] routeFinished = new bool[1];
-    private int finishedCount = 0;
-
+    private int activeCharacterIndex = 0;
+    private int[] totalRizzScores = new int[2];
     private int currentRizz = 0;
 
-    private Dictionary<DialogueOptionResult, int> resultToDelta = 
-        new Dictionary<DialogueOptionResult, int> 
-        {
-            {DialogueOptionResult.POSITIVE, 5},
-            {DialogueOptionResult.NEUTRAL, 0},
-            {DialogueOptionResult.NEGATIVE, -3}
+    private Dictionary<DialogueOptionResult, int> resultToDelta = new Dictionary<DialogueOptionResult, int> 
+    {
+        {DialogueOptionResult.POSITIVE, 5},
+        {DialogueOptionResult.NEUTRAL, 0},
+        {DialogueOptionResult.NEGATIVE, -3}
 
-        };
+    };
+    private Dictionary<int, int> characterRizzThresholds = new Dictionary<int, int>
+    {
+        {0, 10 },
+        {1, 10},
+    };
 
     private Dictionary<string, int> sceneToCharacterIndex =
     new Dictionary<string, int>
@@ -40,13 +37,12 @@ public class NarrativeController : MonoBehaviour
             {"MainScene2", 1}
     };
 
-    private int activeCharacterIndex = 0;
+    
 
     void Awake()
     {
         activeCharacterIndex = sceneToCharacterIndex[SceneManager.GetActiveScene().name];
-        Debug.Log("AWAKE");
-        Debug.Log(activeCharacterIndex);
+        Debug.Log("Active character index: " + activeCharacterIndex.ToString());
 
 
         if (Instance != null && Instance != this)
@@ -85,7 +81,7 @@ public class NarrativeController : MonoBehaviour
     {
         if (node == null || currentDialogueNode.IsFinalNode)
         {
-            TryFinishRoute();
+            LoadNextCharacter();
             return;
         }
         UIController.LoadDialogueNode(node);
@@ -105,7 +101,7 @@ public class NarrativeController : MonoBehaviour
         int who = activeCharacterIndex;
 
         Debug.Log(who);
-        scores[who] = scores[who] + resultToDelta[currentDialogueNode.playerChoices[selectedOptionNumber].result];
+        AddRizz(resultToDelta[currentDialogueNode.playerChoices[selectedOptionNumber].result]);
 
         DialogueNode nextDialogueNode = currentDialogueNode.playerChoices[selectedOptionNumber].nextDialogueNode;
 
@@ -129,38 +125,26 @@ public class NarrativeController : MonoBehaviour
         LoadDialogueNode(dialogNode);
     }
 
-    private void TryFinishRoute()
+    private void LoadNextCharacter()
     {
-        int who = activeCharacterIndex;
+        totalRizzScores[activeCharacterIndex] = currentRizz;
+        currentRizz = 0;
 
-        if (!routeFinished[who])
-        {
-            routeFinished[who] = true;
-            finishedCount++;
-        }
-
-        // Kui kõik tegelased on teinud dialoguei ära kui 2 korda on dialogue lõppu jõudnud
-        if (finishedCount >= 1)
-        {
-            SceneManager.LoadScene(endingSceneName);
-        }
-        else
-        {
-            // TODO: Go to next character scene, not to same character again
-            SceneManager.LoadScene("MainScene");
-        }
+        // TODO: load next character's scene
+        SceneManager.LoadScene(endingSceneName);
     }
 
-    public string GetEndingPanelName()
+    public int GetEndingNumber()
     {
-
-        Debug.Log(string.Join(",", scores));
-        int numGood = scores.Count(v => v >= goodThreshold);
-        int numNeutral = scores.Count(v => v >= neutralThreshold && v < goodThreshold);
-
-        if (numGood == scores.Length) return "Good_Ending_Panel";
-        if (numGood > 0 || numNeutral > 0) return "Neutral_Ending_Panel";
-        return "Bad_Ending_Panel";
+        bool success = true;
+        for (int i = 0; i < totalRizzScores.Length; i++)
+        {
+            if (totalRizzScores[i] < characterRizzThresholds[i])
+            {
+                success = false;
+            }
+        }
+        return success ? 1 : 0;
     }
 
 }

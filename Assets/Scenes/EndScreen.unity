@@ -267,7 +267,7 @@ GameObject:
   - component: {fileID: 484278550}
   - component: {fileID: 484278549}
   m_Layer: 5
-  m_Name: Neutral_Ending_Panel
+  m_Name: NeutralEndingPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -639,7 +639,7 @@ GameObject:
   - component: {fileID: 1418893587}
   - component: {fileID: 1418893586}
   m_Layer: 5
-  m_Name: Good_Ending_Panel
+  m_Name: GoodEndingPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -830,6 +830,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   narrativeController: {fileID: 0}
+  badEndingPanel: {fileID: 0}
+  NeutralEndingPanel: {fileID: 0}
+  goodEndingPanel: {fileID: 0}
 --- !u!4 &1844355666
 Transform:
   m_ObjectHideFlags: 0
@@ -961,7 +964,7 @@ GameObject:
   - component: {fileID: 1901460036}
   - component: {fileID: 1901460035}
   m_Layer: 5
-  m_Name: Bad_Ending_Panel
+  m_Name: BadEndingPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
