@@ -22,6 +22,8 @@ public class NarrativeController : MonoBehaviour
     private bool[] routeFinished = new bool[1];
     private int finishedCount = 0;
 
+    private int currentRizz = 0;
+
     private Dictionary<DialogueOptionResult, int> resultToDelta = 
         new Dictionary<DialogueOptionResult, int> 
         {
@@ -66,6 +68,12 @@ public class NarrativeController : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void AddRizz(int value)
+    {
+        currentRizz += value;
+        UIController.UpdateRizzCounter(currentRizz);
     }
 
     public void StartDialogue()
