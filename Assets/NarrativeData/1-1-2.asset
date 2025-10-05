@@ -18,9 +18,9 @@ MonoBehaviour:
     nextDialogueNode: {fileID: 11400000, guid: 40b006a0491991d47b33e7e2cc9fe848, type: 2}
     result: 1
   - text: Steal it
-    nextDialogueNode: {fileID: 11400000, guid: 6a8967b0b0a3740488187b5bc5abfabe, type: 2}
+    nextDialogueNode: {fileID: 11400000, guid: 9827e8ed5db4e7444b3d8a86d60f4228, type: 2}
     result: 0
   - text: Nothing
-    nextDialogueNode: {fileID: 11400000, guid: 6a8967b0b0a3740488187b5bc5abfabe, type: 2}
+    nextDialogueNode: {fileID: 11400000, guid: 2bf4090c39c521a47b9f9dd1253086d6, type: 2}
     result: 0
   requireMinigame: 1

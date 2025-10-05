@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 399cd42775bfe2940a2b9536cfcae2af, type: 3}
-  m_Name: 2-1-1
+  m_Name: 2-1-2 1
   m_EditorClassIdentifier: 
-  npcText: Siit algab
+  npcText: 
   playerChoices:
-  - text: '*lie* Yeah I love all the pet shops. My favorite is the dog one'
+  - text: Hey, smiley face. How are you doing?
     nextDialogueNode: {fileID: 11400000, guid: 61d0fed6c741b8c4a9c1651610eaf394, type: 2}
     result: 0
   requireMinigame: 0

@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 399cd42775bfe2940a2b9536cfcae2af, type: 3}
-  m_Name: 2-1-1
+  m_Name: 2-1-0
   m_EditorClassIdentifier: 
-  npcText: Siit algab
+  npcText: '*While walking the street, alone and with a heart full of desire, you
+    spot a lovely gentleman,  who is looking longingly into the distance*'
   playerChoices:
-  - text: '*lie* Yeah I love all the pet shops. My favorite is the dog one'
-    nextDialogueNode: {fileID: 11400000, guid: 61d0fed6c741b8c4a9c1651610eaf394, type: 2}
-    result: 0
+  - text: Hey, smiley face. How are you doing?
+    nextDialogueNode: {fileID: 11400000, guid: c52a25ca9d48a7c43aeebb5d61b60f44, type: 2}
+    result: 1
   requireMinigame: 0

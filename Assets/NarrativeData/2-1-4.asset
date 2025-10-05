@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 399cd42775bfe2940a2b9536cfcae2af, type: 3}
+  m_Name: 2-1-4
+  m_EditorClassIdentifier: 
+  npcText: I...uh... was just thinking of wonster energy drink. *you start to notice
+    his face looks a bit more red than it did before. You should make him feel better
+    and fast*
+  playerChoices:
+  - text: 'really? That is boring and I''m dissapointed. '
+    nextDialogueNode: {fileID: 11400000, guid: 04ec83fd9aee61c4099b263f0c07f7a5, type: 2}
+    result: 0
+  - text: 'That is cool! It is a good energy drink, don''t feel shy for liking it. '
+    nextDialogueNode: {fileID: 11400000, guid: f7c4f342c094bd349a06c32ddf29bfa7, type: 2}
+    result: 2
+  - text: What do you call a fly with no wings? A walk
+    nextDialogueNode: {fileID: 11400000, guid: a097205d79370814e8721c8edb0cfad0, type: 2}
+    result: 1
+  requireMinigame: 1

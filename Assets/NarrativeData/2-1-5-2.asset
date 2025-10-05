@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 399cd42775bfe2940a2b9536cfcae2af, type: 3}
-  m_Name: 2-1-1
+  m_Name: 2-1-5-2
   m_EditorClassIdentifier: 
-  npcText: Siit algab
+  npcText: That was a cool joke I guess. *He seems to be a bit less afraid of you
+    now*
   playerChoices:
-  - text: '*lie* Yeah I love all the pet shops. My favorite is the dog one'
-    nextDialogueNode: {fileID: 11400000, guid: 61d0fed6c741b8c4a9c1651610eaf394, type: 2}
+  - text: 'Hahaha I love collecting jokes, among others things. '
+    nextDialogueNode: {fileID: 11400000, guid: c21c5edda75e30f42a533f76d006effa, type: 2}
     result: 0
   requireMinigame: 0
