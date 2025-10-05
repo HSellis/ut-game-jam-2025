@@ -1,33 +1,75 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 using UnityEngine.Video;
+using UnityEngine.SceneManagement;
 
 public class VideoPanelController : MonoBehaviour
 {
-    public VideoPlayer videoPlayer;
-    public GameObject buttonsContainer;
+    [Header("Ending Panels")]
+    public GameObject goodEndingPanel;
+    public GameObject neutralEndingPanel;
+    public GameObject badEndingPanel;
+
+    private VideoPlayer activeVideoPlayer;
+    private GameObject activeButtonsContainer;
 
     void Start()
     {
-        // Hide buttons at start
-        buttonsContainer.SetActive(false);
+        // Hide all buttons initially
+        HideAllButtons();
 
-        // Subscribe to end event
-        videoPlayer.loopPointReached += OnVideoEnd;
+        // Find which panel is active in the scene
+        if (goodEndingPanel.activeSelf)
+            SetupPanel(goodEndingPanel);
+        else if (neutralEndingPanel.activeSelf)
+            SetupPanel(neutralEndingPanel);
+        else if (badEndingPanel.activeSelf)
+            SetupPanel(badEndingPanel);
+        else
+            Debug.LogWarning("No ending panel is active!");
+    }
 
-        // Start playing automatically
-        videoPlayer.Play();
+    void SetupPanel(GameObject panel)
+    {
+        // Get references inside this panel
+        activeVideoPlayer = panel.GetComponentInChildren<VideoPlayer>(true);
+        activeButtonsContainer = panel.transform.Find("ButtonsContainer").gameObject;
+
+        if (activeVideoPlayer == null)
+        {
+            Debug.LogError("No VideoPlayer found in the active panel!");
+            return;
+        }
+
+        // Hide the buttons first
+        activeButtonsContainer.SetActive(false);
+
+        // Subscribe to the end event
+        activeVideoPlayer.loopPointReached += OnVideoEnd;
+
+        // Start the video
+        activeVideoPlayer.Play();
     }
 
     void OnVideoEnd(VideoPlayer vp)
     {
-        // Stop the video and show the buttons
-        buttonsContainer.SetActive(true);
+        // Show only this panel's buttons when video ends
+        if (activeButtonsContainer != null)
+            activeButtonsContainer.SetActive(true);
     }
 
+    void HideAllButtons()
+    {
+        if (goodEndingPanel != null)
+            goodEndingPanel.transform.Find("ButtonsContainer").gameObject.SetActive(false);
+        if (neutralEndingPanel != null)
+            neutralEndingPanel.transform.Find("ButtonsContainer").gameObject.SetActive(false);
+        if (badEndingPanel != null)
+            badEndingPanel.transform.Find("ButtonsContainer").gameObject.SetActive(false);
+    }
+
+    // Called by your button
     public void LoadMainMenu()
     {
-        SceneManager.LoadScene("StartMenu");
+        SceneManager.LoadScene("MainMenu");
     }
 }
