@@ -4,6 +4,7 @@ public class Maze : MonoBehaviour
 {
     public Transform spawnLocation;
     private NarrativeController narrativeController;
+    public MazeExitIndicator exitIndicatorPrefab;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

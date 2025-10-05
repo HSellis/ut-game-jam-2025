@@ -16,7 +16,6 @@ public class Ball : MonoBehaviour
         rb = GetComponent<Rigidbody>();
 
         maxVolume = audioSource.volume;
-        Debug.Log(maxVolume);
     }
 
     // Update is called once per frame
@@ -24,7 +23,6 @@ public class Ball : MonoBehaviour
     {
         float velocityMagnitude = rb.linearVelocity.magnitude;
         float velocityPercentage = Mathf.Clamp01(velocityMagnitude / maxVelocityValue);
-        Debug.Log(velocityPercentage);
         audioSource.volume = velocityPercentage;
     }
 }

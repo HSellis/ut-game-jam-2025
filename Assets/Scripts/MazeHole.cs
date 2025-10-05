@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class MazeHole : MonoBehaviour
 {
-    public GameObject optionIndicatorPrefab;
     private Color[] optionColors = { Color.blue, Color.green, Color.yellow };
 
     private Maze maze;
@@ -12,8 +11,9 @@ public class MazeHole : MonoBehaviour
     void Start()
     {
         maze = transform.parent.GetComponent<Maze>();
-        GameObject optionIndicator = Instantiate(optionIndicatorPrefab, transform);
-        optionIndicator.GetComponent<MeshRenderer>().material.color = optionColors[number];
+        MazeExitIndicator exitIndicator = Instantiate(maze.exitIndicatorPrefab, transform.position, maze.exitIndicatorPrefab.transform.rotation);
+        exitIndicator.mazeHole = this;
+        exitIndicator.color = optionColors[number];
     }
 
     // Update is called once per frame

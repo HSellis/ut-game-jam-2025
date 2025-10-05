@@ -66,7 +66,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7278f007a8bfd34ab6d883158ea193d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  optionIndicatorPrefab: {fileID: 3752866053389515901, guid: b84659e8514f83f47a59a90c7cde2f9f, type: 3}
   number: 1
 --- !u!1 &604731073793599843
 GameObject:
@@ -486,7 +485,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7278f007a8bfd34ab6d883158ea193d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  optionIndicatorPrefab: {fileID: 3752866053389515901, guid: b84659e8514f83f47a59a90c7cde2f9f, type: 3}
   number: 2
 --- !u!1 &1387065805428947278
 GameObject:
@@ -2667,6 +2665,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnLocation: {fileID: 5778302345326150050}
+  exitIndicatorPrefab: {fileID: -5415411024824267173, guid: 82cc36391f4b1334b842e6c3b031732c, type: 3}
 --- !u!54 &6376348596636943013
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4520,7 +4519,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7278f007a8bfd34ab6d883158ea193d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  optionIndicatorPrefab: {fileID: 0}
   number: 0
 --- !u!1 &7487331447671338891
 GameObject:
