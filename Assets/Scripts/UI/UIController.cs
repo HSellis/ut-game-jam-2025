@@ -9,6 +9,7 @@ public class UIController : MonoBehaviour
 
     public TextMeshProUGUI textQuestion;
     public TextMeshProUGUI[] textOptions;
+    public TextMeshProUGUI rizzCounter;
 
     private Color defaultColor = Color.red;
     private Color[] optionColors = { Color.blue, Color.green, Color.yellow };
@@ -96,5 +97,10 @@ public class UIController : MonoBehaviour
     public void SelectOption3()
     {
         narrativeController.SelectDialogueOption(2);
+    }
+
+    public void UpdateRizzCounter(int rizzScore)
+    {
+        rizzCounter.text = "Current rizz: " + rizzScore.ToString();
     }
 }
