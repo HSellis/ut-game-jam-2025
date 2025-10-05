@@ -15,7 +15,7 @@ MonoBehaviour:
   npcText: '*he looks happy and proud* Thanks! I really tried my hardest. '
   playerChoices:
   - text: '*try to kiss him*'
-    nextDialogueNode: {fileID: 11400000, guid: 39c9e57021782c84fa0ca7ff15073d09, type: 2}
+    nextDialogueNode: {fileID: 11400000, guid: e1fce6fc2e419a64e900a0c12019b0dc, type: 2}
     result: 0
   - text: '*ask to see the Wonster can collection*'
     nextDialogueNode: {fileID: 11400000, guid: 39c9e57021782c84fa0ca7ff15073d09, type: 2}

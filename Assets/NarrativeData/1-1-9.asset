@@ -18,4 +18,4 @@ MonoBehaviour:
   - text: Continue
     nextDialogueNode: {fileID: 11400000, guid: 1170d6ccc603c5542b3d426f05e3df50, type: 2}
     result: 2
-  requireMinigame: 1
+  requireMinigame: 0
