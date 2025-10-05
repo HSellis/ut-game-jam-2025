@@ -23,6 +23,6 @@ MonoBehaviour:
     nextDialogueNode: {fileID: 11400000, guid: 6a8967b0b0a3740488187b5bc5abfabe, type: 2}
     result: 2
   - text: You know I changed my mind *try to snatch it back*
-    nextDialogueNode: {fileID: 11400000, guid: 306c8fea38acd6a4a97a5edf01b0e131, type: 2}
+    nextDialogueNode: {fileID: 11400000, guid: 9827e8ed5db4e7444b3d8a86d60f4228, type: 2}
     result: 0
   requireMinigame: 0

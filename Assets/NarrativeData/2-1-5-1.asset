@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 399cd42775bfe2940a2b9536cfcae2af, type: 3}
+  m_Name: 2-1-5-1
+  m_EditorClassIdentifier: 
+  npcText: Really? Thanks! This is the best compliment I've had this whole year!
+  playerChoices:
+  - text: 'That is really sad. Your collection of compiments should be bigger. '
+    nextDialogueNode: {fileID: 11400000, guid: cf10a1f5052c28849aac2e703f24dcbc, type: 2}
+    result: 1
+  requireMinigame: 0

@@ -16,4 +16,5 @@ MonoBehaviour:
   playerChoices:
   - text: '*lie* Yeah I love all the pet shops. My favorite is the dog one'
     nextDialogueNode: {fileID: 11400000, guid: 61d0fed6c741b8c4a9c1651610eaf394, type: 2}
-  requireMinigame: 1
+    result: 0
+  requireMinigame: 0

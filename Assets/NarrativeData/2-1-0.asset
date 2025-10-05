@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 399cd42775bfe2940a2b9536cfcae2af, type: 3}
+  m_Name: 2-1-0
+  m_EditorClassIdentifier: 
+  npcText: '*While walking the street, alone and with a heart full of desire, you
+    spot a lovely gentleman,  who is looking longingly into the distance*'
+  playerChoices:
+  - text: Hey, smiley face. How are you doing?
+    nextDialogueNode: {fileID: 11400000, guid: c52a25ca9d48a7c43aeebb5d61b60f44, type: 2}
+    result: 1
+  requireMinigame: 0
