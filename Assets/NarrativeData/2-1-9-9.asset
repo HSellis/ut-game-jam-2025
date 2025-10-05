@@ -15,6 +15,6 @@ MonoBehaviour:
   npcText: '*he walks away, you have failed to gain his heart*'
   playerChoices:
   - text: Game over
-    nextDialogueNode: {fileID: 11400000}
+    nextDialogueNode: {fileID: 0}
     result: 1
   requireMinigame: 0
