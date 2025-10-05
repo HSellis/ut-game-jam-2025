@@ -29,8 +29,6 @@ public class DialogueNode : ScriptableObject
     public string npcText;
     public List<DialogueOption> playerChoices;
     public bool requireMinigame;
-
-    public int characterIndex;
     public bool IsFinalNode
     {
         get {
