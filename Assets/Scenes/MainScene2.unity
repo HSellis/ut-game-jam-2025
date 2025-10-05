@@ -1666,9 +1666,9 @@ MonoBehaviour:
   - {fileID: 368006953}
   rizzCounter: {fileID: 1346403808}
   characterImage: {fileID: 2004601484}
-  negativeResultSprite: {fileID: 2800000, guid: 8c09e5e60d7558944a16e1fb7f9230c5, type: 3}
-  neutralResultSprite: {fileID: 2800000, guid: 38f297b017b3c9d45a121d0ec7685977, type: 3}
-  positiveResultSprite: {fileID: 2800000, guid: cbab8eae7dfebdc44bade61fbf6ed1cc, type: 3}
+  negativeResultSprite: {fileID: 2800000, guid: c29d5b2d07d1e8e41826d583e642b077, type: 3}
+  neutralResultSprite: {fileID: 2800000, guid: bbd0d197d3515fc40bef4dbe90b83c83, type: 3}
+  positiveResultSprite: {fileID: 2800000, guid: 3269b31fd91ac3144836137cdf169db4, type: 3}
 --- !u!1 &1746299016
 GameObject:
   m_ObjectHideFlags: 0

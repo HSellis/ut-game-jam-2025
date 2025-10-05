@@ -26,7 +26,7 @@ public class StartMenuManager : MonoBehaviour
     public void OnPlayPressed()
     {
         audioManager.PlayCharacter1Theme();
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene("MainScene2");
     }
 
     public void OnQuitPressed()
