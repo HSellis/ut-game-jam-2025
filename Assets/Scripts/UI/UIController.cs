@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
-    public NarrativeController narrativeController;
+    private NarrativeController narrativeController;
+    public AudioManager audioManager;
 
     public TextMeshProUGUI textQuestion;
     public TextMeshProUGUI[] textOptions;
@@ -23,7 +24,8 @@ public class UIController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        audioManager = AudioManager.Instance;
+        narrativeController = NarrativeController.Instance;
     }
 
     // Update is called once per frame
@@ -49,7 +51,10 @@ public class UIController : MonoBehaviour
                 
                 if (node.requireMinigame)
                 {
-                    textMesh.color = optionColors[i];
+                    textMesh.color = Color.black;
+                    textMesh.fontMaterial = new Material(textMesh.fontMaterial);
+                    textMesh.fontMaterial.SetColor("_OutlineColor", optionColors[i]);
+                    textMesh.fontMaterial.SetFloat("_OutlineWidth", 0.2f);
                     textMeshButton.enabled = false;
                 } else
                 {
@@ -86,17 +91,23 @@ public class UIController : MonoBehaviour
 
     public void SelectOption1()
     {
-        narrativeController.SelectDialogueOption(0);
+        SelectOption(0);
     }
 
     public void SelectOption2()
     {
-        narrativeController.SelectDialogueOption(1);
+        SelectOption(1);
     }
 
     public void SelectOption3()
     {
-        narrativeController.SelectDialogueOption(2);
+        SelectOption(2);
+    }
+
+    public void SelectOption(int index)
+    {
+        narrativeController.SelectDialogueOption(index);
+        audioManager.PlayButtonClickSound();
     }
 
     public void UpdateRizzCounter(int rizzScore)

@@ -8,10 +8,9 @@ public class NarrativeController : MonoBehaviour
     public static NarrativeController Instance { get; private set; }
     public DialogueNode currentDialogueNode;
 
-    public MazeController mazeController;
-    public UIController UIController;
-
-    private string endingSceneName = "EndScreen";
+    private MazeController mazeController;
+    private UIController UIController;
+    
 
     private int activeCharacterIndex = 0;
     private int[] totalRizzScores = new int[2];
@@ -26,25 +25,18 @@ public class NarrativeController : MonoBehaviour
     };
     private Dictionary<int, int> characterRizzThresholds = new Dictionary<int, int>
     {
-        {0, 10 },
+        {0, 10},
         {1, 10},
     };
 
-    private Dictionary<string, int> sceneToCharacterIndex =
-    new Dictionary<string, int>
-    {
-            {"MainScene", 0},
-            {"MainScene2", 1}
-    };
+    private string[] characterSceneNames = new string[] { "MainScene", "MainScene2" };
+    public DialogueNode[] sceneStartingNodes;
+    public string endingSceneName = "EndScreen";
 
-    
+
 
     void Awake()
     {
-        activeCharacterIndex = sceneToCharacterIndex[SceneManager.GetActiveScene().name];
-        Debug.Log("Active character index: " + activeCharacterIndex.ToString());
-
-
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
@@ -57,7 +49,13 @@ public class NarrativeController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        StartDialogue();
+        
+    }
+
+    private void FindManagers()
+    {
+        mazeController = GameObject.Find("MazeController").GetComponent<MazeController>();
+        UIController = GameObject.Find("UICanvas").GetComponent<UIController>();
     }
 
     // Update is called once per frame
@@ -74,6 +72,8 @@ public class NarrativeController : MonoBehaviour
 
     public void StartDialogue()
     {
+        DialogueNode startingNode = sceneStartingNodes[activeCharacterIndex];
+        currentDialogueNode = startingNode;
         LoadDialogueNode(currentDialogueNode);
     }
 
@@ -125,13 +125,27 @@ public class NarrativeController : MonoBehaviour
         LoadDialogueNode(dialogNode);
     }
 
+    public void LoadFirstCharacter()
+    {
+        activeCharacterIndex = 0;
+        SceneManager.LoadScene(activeCharacterIndex);
+
+        Invoke("FindManagers", 0.1f);
+        Invoke("StartDialogue", 0.25f);
+        
+    }
+
     private void LoadNextCharacter()
     {
         totalRizzScores[activeCharacterIndex] = currentRizz;
         currentRizz = 0;
 
-        // TODO: load next character's scene
-        SceneManager.LoadScene(endingSceneName);
+        activeCharacterIndex++;
+        string nextCharacterScene = characterSceneNames[activeCharacterIndex];
+        SceneManager.LoadScene(nextCharacterScene);
+
+        Invoke("FindManagers", 0.1f);
+        Invoke("StartDialogue", 0.25f);
     }
 
     public int GetEndingNumber()

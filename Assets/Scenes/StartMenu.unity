@@ -687,6 +687,7 @@ RectTransform:
   - {fileID: 636504859}
   - {fileID: 1538079178}
   - {fileID: 1139073874}
+  - {fileID: 715099086}
   m_Father: {fileID: 819400560}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1028,6 +1029,81 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSlider: {fileID: 1139073875}
+--- !u!1 &715099085
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 715099086}
+  - component: {fileID: 715099088}
+  - component: {fileID: 715099087}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &715099086
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715099085}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 489945244}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -91.04651, y: 461.86044}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &715099087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715099085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 1971482823, guid: ce1dc7f6bde2ac64ab8b38bb1d4a0f26, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &715099088
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715099085}
+  m_CullTransparentMesh: 1
 --- !u!1 &752739711
 GameObject:
   m_ObjectHideFlags: 0
@@ -1786,8 +1862,9 @@ GameObject:
   - component: {fileID: 1220751247}
   - component: {fileID: 1220751246}
   - component: {fileID: 1220751248}
+  - component: {fileID: 1220751249}
   m_Layer: 0
-  m_Name: AudioManager
+  m_Name: GameController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1807,7 +1884,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   masterMixer: {fileID: 24100000, guid: ef86a9cabfdb50f4daeefc92610097c5, type: 2}
   mainMenuTheme: {fileID: 8300000, guid: 8c242116dc0d29641ad8b211ab62eee9, type: 3}
-  character1Theme: {fileID: 8300000, guid: 6927d6b5f351621488bc8843e91aebc4, type: 3}
+  characterThemes:
+  - {fileID: 8300000, guid: 74a869adf8f0f184387c7057738b8d6e, type: 3}
+  - {fileID: 8300000, guid: 6927d6b5f351621488bc8843e91aebc4, type: 3}
+  buttonClickSound: {fileID: 8300000, guid: 61e18b2eefb076a4889595aa2577cd5a, type: 3}
+  rizzSounds:
+  - {fileID: 8300000, guid: 6b7a31d355b80034984fb5e34b6dac68, type: 3}
+  - {fileID: 8300000, guid: c89ac55a851b746448fae1f4bd2b6ae8, type: 3}
+  - {fileID: 8300000, guid: 2023546a7b487c143af627dbbb4cf958, type: 3}
+  - {fileID: 8300000, guid: 2a88143cc6a7cc7408061d91af33abb6, type: 3}
+  - {fileID: 8300000, guid: ec475ed49095c314f93efacbd50e3c7e, type: 3}
 --- !u!4 &1220751247
 Transform:
   m_ObjectHideFlags: 0
@@ -1920,6 +2006,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1220751249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1220751245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f338bb3a8b4de4240950771a6f06d43c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentDialogueNode: {fileID: 0}
+  sceneStartingNodes:
+  - {fileID: 11400000, guid: 022d054b66610894495592e38dadb90d, type: 2}
+  - {fileID: 11400000, guid: 52496704ec658524996f0ae8fa1df684, type: 2}
+  endingSceneName: EndScreen
 --- !u!1 &1519616170
 GameObject:
   m_ObjectHideFlags: 0
@@ -3116,7 +3219,8 @@ MonoBehaviour:
   mainPanel: {fileID: 1519616170}
   settingsPanel: {fileID: 489945243}
   tutorialPanel: {fileID: 362740653}
-  audioManager: {fileID: 0}
+  audioManager: {fileID: 1220751246}
+  narrativeController: {fileID: 0}
 --- !u!1 &2097851038
 GameObject:
   m_ObjectHideFlags: 0
